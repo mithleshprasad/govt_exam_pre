@@ -183,7 +183,8 @@ function viewHome(){
   '<div class="card"><h2>Eligibility (as reported)</h2><ul class="plain"><li>B.E / B.Tech (CS / IT), MCA or M.Sc (CS).</li><li>B.Sc (CS) or BCA with a PG degree.</li><li>DOEACC A / B / C level with graduation or PG.</li><li>B.Ed is reported as not mandatory for this post.</li></ul></div>'+
   '<div class="card"><h2>Your progress</h2><div class="prog"><i style="width:'+(total?Math.round(done/total*100):0)+'%"></i></div>'+
    '<div class="row"><button class="btn primary" data-go="syllabus">Open checklist</button><button class="btn" data-go="quiz">'+'Quiz shuru karo'+'</button></div></div>'+
-  '<div class="card"><h2>Study order</h2><ul class="plain"><li>Digital logic and number systems</li><li>C programming</li><li>Data structures, then algorithms</li><li>Operating system</li><li>DBMS and SQL</li><li>Networks, security, AI / cloud</li><li>Previous-year papers, timed: 2½ hours, 150 questions</li></ul></div>'+
+  '<div class="card"><h2>Aur kaun se exam de sakte hain?</h2><p style="margin:0 0 6px">Maan raha hoon ki aapki degree CS/IT (B.Tech, BCA, MCA ya B.Sc CS) hai. Neeche ke exams me Maths + Reasoning (Notes tab → Maths + Reasoning) kaam aayega. Eligibility, age aur syllabus har notification me check karein.</p><ul class="plain"><li><b>Teaching:</b> Bihar TRE / STET (Computer), KVS-NVS PGT/TGT Computer, CTET / state TET.</li><li><b>Bihar:</b> BPSC CCE, BSSC graduate level, Bihar Police SI / Sergeant.</li><li><b>SSC:</b> CGL, CHSL, MTS, CPO.</li><li><b>Railway:</b> RRB NTPC, Group D, ALP, JE (CS/IT).</li><li><b>Banking:</b> IBPS / SBI PO, Clerk, RRB, <b>IBPS SO (IT Officer)</b>.</li><li><b>Higher / IT:</b> UGC NET (Computer Science), GATE, defence aur PSU IT posts.</li></ul></div>'+
+'<div class="card"><h2>Study order</h2><ul class="plain"><li>Digital logic and number systems</li><li>C programming</li><li>Data structures, then algorithms</li><li>Operating system</li><li>DBMS and SQL</li><li>Networks, security, AI / cloud</li><li>Previous-year papers, timed: 2½ hours, 150 questions</li></ul></div>'+
   '<div class="card"><h2>Honest limits</h2><p style="margin:0">These notes are a revision aid, not full coverage. Practice with the old papers and read a standard book for each subject. Language and General Studies need separate preparation.</p></div>';
 }
 
@@ -208,7 +209,8 @@ function viewSyllabus(){
 var PARTS=[
  {id:"3",label:"Part III · Computer",get:function(){return window.NOTES_ADV||[]}},
  {id:"2",label:"Part II · GS",get:function(){return window.NOTES_GS||[]}},
- {id:"1",label:"Part I · Language",get:function(){return window.NOTES_LANG||[]}}];
+ {id:"1",label:"Part I · Language",get:function(){return window.NOTES_LANG||[]}},
+ {id:"M",label:"Maths + Reasoning",get:function(){return window.NOTES_MR||[]}}];
 function chKey(t){return t.split(" ·")[0].trim()}
 function chapters(){var o=[];PARTS.forEach(function(p){p.get().forEach(function(c){o.push({p:p.id,key:chKey(c.t),c:c})})});return o}
 function chByKey(k){var a=chapters();for(var i=0;i<a.length;i++)if(a[i].key===k)return a[i];return null}
