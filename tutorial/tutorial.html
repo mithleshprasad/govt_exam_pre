@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<title>BPSC Computer Teacher – Tutorial & Practice (Hindi + English)</title>
+<style>
+@page { size: A4; margin: 14mm; }
+body { font-family: "Nirmala UI", "Mangal", "Segoe UI", Arial, sans-serif; font-size: 11pt; line-height: 1.45; color: #111; }
+h1 { text-align: center; font-size: 22pt; margin: 0 0 4px; }
+.sub { text-align: center; color: #444; margin-bottom: 14px; }
+h2 { font-size: 15pt; background: #1f3a68; color: #fff; padding: 5px 10px; margin: 18px 0 8px; page-break-after: avoid; }
+h3 { font-size: 12pt; margin: 12px 0 4px; color: #1f3a68; page-break-after: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0; page-break-inside: avoid; }
+th, td { border: 1px solid #888; padding: 3px 6px; vertical-align: top; }
+th { background: #e6ecf7; }
+ul { margin: 3px 0 6px 18px; padding: 0; }
+li { margin-bottom: 2px; }
+.hi { color: #5a2a00; }
+.box { border: 1px solid #1f3a68; background: #f3f6fc; padding: 5px 9px; margin: 6px 0; page-break-inside: avoid; }
+pre { background: #f4f4f4; border: 1px solid #ccc; padding: 6px; font-family: Consolas, monospace; font-size: 9.5pt; white-space: pre-wrap; page-break-inside: avoid; }
+.q { margin: 6px 0; page-break-inside: avoid; }
+.ans { color: #0a6b2a; }
+.toc li { margin-bottom: 1px; }
+.pb { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<h1>BPSC TRE 4.0 – Computer Teacher</h1>
+<div class="sub">Tutorial + Practice Questions &nbsp;|&nbsp; English + हिंदी<br>
+Based on the topics asked in BPSC TRE previous year Computer Science papers (see the <b>papers</b> folder)</div>
+
+<div class="box">
+<b>How to use / कैसे पढ़ें:</b> Read each chapter, then solve the practice MCQs at the end and check the answers.
+Every BPSC question has options (A)–(E): (D) = "More than one of the above", (E) = "None of the above" — always check all options before choosing.<br>
+<span class="hi">हर अध्याय पढ़ें, फिर अंत के MCQ हल करें। BPSC में विकल्प (D) "उपर्युक्त में से एक से अधिक" और (E) "उपर्युक्त में से कोई नहीं" होते हैं — सभी विकल्प जाँचकर ही उत्तर चुनें।</span>
+</div>
+
+<h3>Contents / विषय-सूची</h3>
+<ol class="toc">
+<li>Number Systems &amp; Digital Logic / संख्या पद्धति और डिजिटल लॉजिक</li>
+<li>Computer Fundamentals &amp; Memory / कंप्यूटर के मूल सिद्धांत और मेमोरी</li>
+<li>C Programming / C प्रोग्रामिंग</li>
+<li>Data Structures / डेटा स्ट्रक्चर</li>
+<li>Algorithms &amp; Complexity / एल्गोरिदम और जटिलता</li>
+<li>Operating System / ऑपरेटिंग सिस्टम</li>
+<li>DBMS &amp; SQL / डेटाबेस और SQL</li>
+<li>Computer Networks / कंप्यूटर नेटवर्क</li>
+<li>Internet, Web &amp; Security / इंटरनेट, वेब और सुरक्षा</li>
+<li>OOP, C++ &amp; Python / ओओपी, C++ और पाइथन</li>
+<li>Practice MCQs with answers / अभ्यास प्रश्न</li>
+<li>Solved previous-year questions / हल किए गए पिछले वर्ष के प्रश्न</li>
+</ol>
+
+<!-- ============ 1 ============ -->
+<h2 class="pb">1. Number Systems &amp; Digital Logic / संख्या पद्धति और डिजिटल लॉजिक</h2>
+<h3>Number systems / संख्या पद्धतियाँ</h3>
+<table>
+<tr><th>System</th><th>Base</th><th>Digits</th></tr>
+<tr><td>Binary / द्वि-आधारी</td><td>2</td><td>0, 1</td></tr>
+<tr><td>Octal / अष्ट-आधारी</td><td>8</td><td>0–7</td></tr>
+<tr><td>Decimal / दशमलव</td><td>10</td><td>0–9</td></tr>
+<tr><td>Hexadecimal / षोडश-आधारी</td><td>16</td><td>0–9, A–F (A=10 … F=15)</td></tr>
+</table>
+<ul>
+<li>Decimal → binary: divide by 2 repeatedly, read remainders bottom to top. <span class="hi">दशमलव → बाइनरी: बार-बार 2 से भाग दें, शेषफल नीचे से ऊपर पढ़ें।</span></li>
+<li>Binary → octal: group 3 bits; binary → hex: group 4 bits (from the right). <span class="hi">बाइनरी → ऑक्टल: 3 बिट के समूह; बाइनरी → हेक्स: 4 बिट के समूह।</span></li>
+<li>Fraction: 1011.1101₂ = 8+2+1 + 0.5+0.25+0.0625 = 11.8125</li>
+<li>1's complement = flip all bits; 2's complement = 1's complement + 1. Negative numbers are stored in 2's complement. <span class="hi">ऋणात्मक संख्याएँ 2's complement में संग्रहित होती हैं।</span></li>
+<li>Range of n-bit signed (2's complement): −2<sup>n−1</sup> to 2<sup>n−1</sup>−1.</li>
+<li>Booth's algorithm = multiplication of signed binary numbers. <span class="hi">बूथ एल्गोरिदम = बाइनरी गुणा।</span></li>
+<li>Error detection: parity bit, checksum, CRC. Error correction: Hamming code.</li>
+<li>Codes: ASCII (7-bit, 128 chars), Extended ASCII (8-bit, 256), Unicode (supports Hindi and all languages), BCD, Gray code.</li>
+</ul>
+<h3>Logic gates / लॉजिक गेट</h3>
+<table>
+<tr><th>Gate</th><th>Expression</th><th>Output is 1 when…</th></tr>
+<tr><td>AND</td><td>A·B</td><td>both inputs 1</td></tr>
+<tr><td>OR</td><td>A+B</td><td>any input 1</td></tr>
+<tr><td>NOT</td><td>A'</td><td>input is 0</td></tr>
+<tr><td>NAND</td><td>(A·B)'</td><td>any input 0 — <b>universal gate</b></td></tr>
+<tr><td>NOR</td><td>(A+B)'</td><td>both inputs 0 — <b>universal gate</b></td></tr>
+<tr><td>XOR</td><td>A⊕B</td><td>inputs are different (odd number of 1s)</td></tr>
+<tr><td>XNOR</td><td>(A⊕B)'</td><td>inputs are same</td></tr>
+</table>
+<ul>
+<li>NAND and NOR are universal gates — any circuit can be built from them alone. <span class="hi">NAND और NOR यूनिवर्सल गेट हैं।</span></li>
+<li>De Morgan: (A·B)' = A' + B' &nbsp;and&nbsp; (A+B)' = A'·B'. Used to simplify Boolean expressions. <span class="hi">बूलियन व्यंजकों को सरल करने में उपयोगी।</span></li>
+<li>Don't-care condition: input combination whose value does not affect the output (used in K-map to simplify).</li>
+<li>Half adder: Sum = A⊕B, Carry = A·B. Full adder adds 3 bits (A, B, Cin).</li>
+<li>Multiplexer: 2<sup>n</sup>-to-1 needs n select lines (8-to-1 → 3). Decoder: n inputs → 2<sup>n</sup> outputs.</li>
+<li>Flip-flops: SR, JK, D, T (store 1 bit). Combinational circuit: output depends only on current input; sequential: also on past state (has memory).</li>
+<li>PLA = Programmable Logic Array. ROM types: MROM, PROM, EPROM, EEPROM.</li>
+</ul>
+
+<!-- ============ 2 ============ -->
+<h2>2. Computer Fundamentals &amp; Memory / कंप्यूटर के मूल सिद्धांत और मेमोरी</h2>
+<ul>
+<li>Generations: 1st vacuum tube, 2nd transistor, 3rd IC, 4th microprocessor (VLSI), 5th AI. <span class="hi">पहली पीढ़ी वैक्यूम ट्यूब, दूसरी ट्रांजिस्टर, तीसरी IC, चौथी माइक्रोप्रोसेसर, पाँचवीं AI।</span></li>
+<li>CPU = ALU + Control Unit + Registers. Von Neumann architecture: program and data stored in the same memory.</li>
+<li>Memory hierarchy (fast → slow, small → big): Registers → Cache → RAM → Secondary storage (HDD/SSD). <span class="hi">रजिस्टर → कैश → RAM → हार्ड डिस्क।</span></li>
+<li>RAM: volatile (data lost when power off). ROM: non-volatile. SRAM (cache, faster, costly), DRAM (main memory, needs refresh).</li>
+<li>1 KB = 1024 B, 1 MB = 1024 KB, 1 GB = 1024 MB, 1 TB = 1024 GB. 1 byte = 8 bits; 4 bits = nibble.</li>
+<li>Cache mapping: direct, associative, set-associative. TLB is an associative cache for page table entries.</li>
+<li>Input devices: keyboard, mouse, scanner, OMR, OCR, MICR, barcode reader. Output: monitor, printer, plotter, speaker.</li>
+<li>Software: System software (OS, compiler, assembler, interpreter, utilities) and application software. Compiler translates the whole program; interpreter line by line; assembler converts assembly to machine code.</li>
+<li>Booting: BIOS/POST → bootloader → OS loaded into RAM. Cold boot = power on; warm boot = restart.</li>
+<li>Instruction cycle: Fetch → Decode → Execute.</li>
+</ul>
+
+<!-- ============ 3 ============ -->
+<h2>3. C Programming / C प्रोग्रामिंग</h2>
+<h3>Basics</h3>
+<ul>
+<li>C was developed by Dennis Ritchie at Bell Labs (1972). Case-sensitive; execution starts at main(). <span class="hi">C भाषा डेनिस रिची ने बनाई; क्रियान्वयन main() से शुरू होता है।</span></li>
+<li>Data types: int (2/4 B), char (1 B), float (4 B), double (8 B). Format specifiers: %d, %f, %c, %s, %lf, %x.</li>
+<li>Operators: arithmetic (+ − * / %), relational, logical (&amp;&amp; || !), bitwise (&amp; | ^ ~ &lt;&lt; &gt;&gt;), assignment, ++/−−, ternary (?:), sizeof.</li>
+<li>Integer division: 7/2 = 3; 7%2 = 1; 7/2.0 = 3.5.</li>
+<li>Operator precedence (high → low): () [] → unary (++ −− ! ~) → * / % → + − → shift → relational → == != → &amp; → ^ → | → &amp;&amp; → || → ?: → =</li>
+<li>Storage classes: auto, register, static (keeps value between calls), extern.</li>
+<li>Loops: for, while (entry-controlled), do-while (exit-controlled, runs at least once). break exits loop; continue skips to next iteration.</li>
+</ul>
+<h3>Arrays, pointers, functions, strings</h3>
+<ul>
+<li>Array index starts at 0; array name is the address of the first element. int a[5] → a[0]…a[4].</li>
+<li>Pointer stores an address: int *p = &amp;x; *p gives value, p gives address. p+1 moves by sizeof(type) bytes. <span class="hi">पॉइंटर पता संग्रहित करता है; *p मान देता है।</span></li>
+<li>Call by value (copy) vs call by reference (pass pointer, original changes).</li>
+<li>String = char array ending with '\0'. Functions: strlen, strcpy, strcat, strcmp (string.h).</li>
+<li>malloc(size) allocates memory (uninitialised), calloc(n,size) (zero-initialised), realloc resizes, free releases. Memory leak = allocated but never freed.</li>
+<li>Recursion: a function calling itself; needs a base case. Factorial: f(n) = n × f(n−1), f(0)=1.</li>
+<li>struct groups different types; union shares one memory for all members (size = largest member).</li>
+</ul>
+<pre>#include &lt;stdio.h&gt;
+int main() {
+    int a[] = {1, 2, 3}, *p = a;
+    printf("%d %d", *p, *(p + 2));   // output: 1 3
+    return 0;
+}</pre>
+<div class="box">Tip: 5/2 → 2, −5/2 → −2 (truncates toward zero); x++ uses then increments, ++x increments then uses.<br>
+<span class="hi">सुझाव: x++ पहले उपयोग, फिर बढ़ोतरी; ++x पहले बढ़ोतरी, फिर उपयोग।</span></div>
+
+<!-- ============ 4 ============ -->
+<h2>4. Data Structures / डेटा स्ट्रक्चर</h2>
+<table>
+<tr><th>Structure</th><th>Key points / मुख्य बिंदु</th></tr>
+<tr><td>Array</td><td>Fixed size, contiguous memory, O(1) access by index.</td></tr>
+<tr><td>Linked list</td><td>Nodes with data + pointer; dynamic size; insertion/deletion O(1) at known position; access O(n). Types: singly, doubly, circular.</td></tr>
+<tr><td>Stack</td><td>LIFO (Last In First Out); push, pop, peek. Uses: function calls, undo, expression evaluation, DFS.</td></tr>
+<tr><td>Queue</td><td>FIFO; enqueue, dequeue. Types: circular, deque, priority queue. Uses: scheduling, BFS.</td></tr>
+<tr><td>Tree</td><td>Non-linear hierarchical structure. Root, parent, child, leaf, height.</td></tr>
+<tr><td>Graph</td><td>Vertices + edges; non-linear. Stored as adjacency matrix or adjacency list.</td></tr>
+<tr><td>Hash table</td><td>Key → index by hash function; average O(1) search, insert, delete. Collisions: chaining, open addressing.</td></tr>
+</table>
+<ul>
+<li>Linear: array, list, stack, queue. Non-linear: tree, graph. <span class="hi">रैखिक: ऐरे, लिस्ट, स्टैक, क्यू; गैर-रैखिक: ट्री, ग्राफ।</span></li>
+<li>Binary tree: max 2 children per node. Max nodes at level i = 2<sup>i</sup>; max nodes in height h = 2<sup>h+1</sup>−1.</li>
+<li>BST: left &lt; root &lt; right. Inorder traversal of BST gives sorted order. Number of distinct BSTs with n keys = Catalan number: n=3 → 5, n=4 → 14.</li>
+<li>Traversals: Inorder (L-Root-R), Preorder (Root-L-R), Postorder (L-R-Root). BFS uses a queue (level order); DFS uses a stack.</li>
+<li>Balanced tree (AVL): height difference of the two subtrees of any node ≤ 1. Heap: complete binary tree; max-heap parent ≥ children.</li>
+<li>Spanning tree of a graph with N vertices has N−1 edges. Complete graph has N(N−1)/2 edges.</li>
+<li>Postfix: operands first, then operator. Evaluate with stack. Example: 10 5 + → 15; 60 6 / → 10; then 15 10 * → 150.</li>
+<li>Infix to postfix: A+B*C → ABC*+ ; prefix: +A*BC.</li>
+</ul>
+
+<!-- ============ 5 ============ -->
+<h2>5. Algorithms &amp; Complexity / एल्गोरिदम और जटिलता</h2>
+<table>
+<tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Note</th></tr>
+<tr><td>Linear search</td><td>1</td><td>n</td><td>n</td><td>works on unsorted data</td></tr>
+<tr><td>Binary search</td><td>1</td><td>log n</td><td>log n</td><td>needs sorted data</td></tr>
+<tr><td>Bubble / Selection / Insertion sort</td><td>n (bubble, insertion)</td><td>n²</td><td>n²</td><td>simple, in-place</td></tr>
+<tr><td>Merge sort</td><td>n log n</td><td>n log n</td><td>n log n</td><td>Divide &amp; Conquer, needs extra space</td></tr>
+<tr><td>Quick sort</td><td>n log n</td><td>n log n</td><td>n²</td><td>Divide &amp; Conquer, pivot based</td></tr>
+<tr><td>Heap sort</td><td>n log n</td><td>n log n</td><td>n log n</td><td>uses heap</td></tr>
+</table>
+<ul>
+<li>Big-O = upper bound (worst case); Omega (Ω) = lower bound; Theta (Θ) = tight bound. <span class="hi">बिग-ओ ऊपरी सीमा दर्शाता है।</span></li>
+<li>Order: O(1) &lt; O(log n) &lt; O(n) &lt; O(n log n) &lt; O(n²) &lt; O(2ⁿ) &lt; O(n!).</li>
+<li>Divide and Conquer: Divide → Conquer → Combine (merge sort, quick sort, binary search).</li>
+<li>Greedy: locally best choice (Prim's, Kruskal's, Dijkstra, Huffman). Dynamic Programming: stores sub-problem results (Fibonacci, knapsack, LCS).</li>
+<li>Graph traversal: BFS and DFS. Shortest path: Dijkstra, Bellman-Ford, Floyd-Warshall. Minimum spanning tree: Prim, Kruskal.</li>
+<li>Binary search on n elements needs at most ⌊log₂ n⌋+1 comparisons.</li>
+</ul>
+
+<!-- ============ 6 ============ -->
+<h2>6. Operating System / ऑपरेटिंग सिस्टम</h2>
+<ul>
+<li>OS = interface between user and hardware; manages process, memory, file, I/O. Types: batch, multiprogramming, time-sharing, real-time, distributed, network, embedded, mobile. <span class="hi">OS उपयोगकर्ता और हार्डवेयर के बीच इंटरफेस है।</span></li>
+<li>Process states: New → Ready → Running → Waiting/Blocked → Terminated. PCB (Process Control Block) stores process information.</li>
+<li>Process vs thread: thread is a lightweight process sharing code, data and files of its process but with its own stack and registers.</li>
+</ul>
+<h3>CPU scheduling / सीपीयू शेड्यूलिंग</h3>
+<ul>
+<li>FCFS (non-preemptive, convoy effect), SJF (minimum average waiting time; may starve), Priority (starvation → solved by aging), Round Robin (time quantum; preemptive; good for time-sharing).</li>
+<li>Turnaround time = Completion − Arrival; Waiting time = Turnaround − Burst.</li>
+</ul>
+<h3>Deadlock / डेडलॉक</h3>
+<ul>
+<li>Four necessary conditions (all must hold): Mutual exclusion, Hold and wait, No preemption, Circular wait.</li>
+<li>Handling: prevention, avoidance (Banker's algorithm), detection and recovery, ignore (ostrich).</li>
+<li>Semaphore: integer variable with wait(P) and signal(V); binary semaphore (0/1) and counting semaphore. Critical section problem: mutual exclusion, progress, bounded waiting.</li>
+</ul>
+<h3>Memory management / मेमोरी प्रबंधन</h3>
+<ul>
+<li>Paging: physical memory divided into fixed-size <b>frames</b>, logical memory into <b>pages</b> of same size; no external fragmentation (internal fragmentation possible). <span class="hi">पेजिंग: निश्चित आकार के पेज और फ्रेम।</span></li>
+<li>Segmentation: variable-size logical segments (code, data, stack); segment table holds base and limit.</li>
+<li>Virtual memory: demand paging; page fault when needed page is not in RAM. Thrashing = excessive paging, CPU spends more time swapping than executing.</li>
+<li>Page replacement: FIFO (Belady's anomaly), LRU, Optimal.</li>
+<li>Page offset bits = log₂(page size). Page size 4 KB = 2<sup>12</sup> → 12 offset bits.</li>
+<li>Allocation: first fit, best fit, worst fit. External fragmentation (free space scattered) vs internal (wasted inside allocated block).</li>
+</ul>
+<h3>File systems / फाइल सिस्टम</h3>
+<ul>
+<li>Windows: FAT32, NTFS, exFAT. Linux: ext3/ext4. macOS: HFS+/APFS. File operations: create, open, read, write, delete, rename, seek.</li>
+<li>Common Linux commands: ls, cd, pwd, mkdir, rm, cp, mv, cat, chmod, grep, ps, kill.</li>
+</ul>
+
+<!-- ============ 7 ============ -->
+<h2>7. DBMS &amp; SQL / डेटाबेस और SQL</h2>
+<ul>
+<li>DBMS manages a database; examples: MySQL, Oracle, PostgreSQL, SQL Server, MS Access. Advantages: less redundancy, data integrity, security, sharing, backup.</li>
+<li>Data models: hierarchical, network, relational (most used), object-oriented. ER model: entity, attribute, relationship; cardinality 1:1, 1:N, M:N.</li>
+<li>Keys: Super key, Candidate key, <b>Primary key</b> (unique, not null), Alternate key, Foreign key (refers to primary key of another table), Composite key.</li>
+<li>Degree = number of columns (attributes); Cardinality = number of rows (tuples). <span class="hi">डिग्री = कॉलम की संख्या; कार्डिनैलिटी = पंक्तियों की संख्या।</span></li>
+</ul>
+<h3>Normalization / सामान्यीकरण</h3>
+<table>
+<tr><th>Form</th><th>Rule</th></tr>
+<tr><td>1NF</td><td>Every attribute atomic (single valued), no repeating groups</td></tr>
+<tr><td>2NF</td><td>1NF + no partial dependency on part of the candidate key</td></tr>
+<tr><td>3NF</td><td>2NF + no transitive dependency</td></tr>
+<tr><td>BCNF</td><td>For every dependency X → Y, X is a super key</td></tr>
+</table>
+<h3>SQL</h3>
+<table>
+<tr><th>Type</th><th>Commands</th></tr>
+<tr><td>DDL</td><td>CREATE, ALTER, DROP, TRUNCATE, RENAME</td></tr>
+<tr><td>DML</td><td>INSERT, UPDATE, DELETE, SELECT</td></tr>
+<tr><td>DCL</td><td>GRANT, REVOKE</td></tr>
+<tr><td>TCL</td><td>COMMIT, ROLLBACK, SAVEPOINT</td></tr>
+</table>
+<pre>CREATE TABLE student (roll INT PRIMARY KEY, name VARCHAR(30), marks INT);
+INSERT INTO student VALUES (1, 'Rahul', 85);
+SELECT name, marks FROM student WHERE marks &gt; 60 ORDER BY marks DESC;
+SELECT COUNT(*), AVG(marks), MAX(marks) FROM student;
+SELECT dept, COUNT(*) FROM emp GROUP BY dept HAVING COUNT(*) &gt; 2;
+UPDATE student SET marks = 90 WHERE roll = 1;
+DELETE FROM student WHERE roll = 1;</pre>
+<ul>
+<li>WHERE filters rows (before grouping); HAVING filters groups (after GROUP BY). Aggregate functions: COUNT, SUM, AVG, MIN, MAX.</li>
+<li>Joins: INNER, LEFT, RIGHT, FULL OUTER, CROSS. DELETE removes rows (can rollback); TRUNCATE removes all rows (no rollback in most DBs); DROP removes the table itself.</li>
+<li>ACID: Atomicity, Consistency, Isolation, Durability.</li>
+</ul>
+
+<!-- ============ 8 ============ -->
+<h2>8. Computer Networks / कंप्यूटर नेटवर्क</h2>
+<ul>
+<li>Types: PAN, LAN (building), MAN (city), WAN (country; Internet is the largest WAN).</li>
+<li>Topologies: Bus, Star (most common; central hub/switch), Ring, Mesh (n(n−1)/2 links), Tree, Hybrid.</li>
+<li>Devices: Hub (broadcasts), Switch (uses MAC address), Router (uses IP address, connects networks), Bridge, Gateway, Modem, Repeater.</li>
+</ul>
+<h3>OSI model (7 layers) / OSI मॉडल</h3>
+<table>
+<tr><th>#</th><th>Layer</th><th>Role</th></tr>
+<tr><td>7</td><td>Application</td><td>HTTP, FTP, SMTP, DNS</td></tr>
+<tr><td>6</td><td>Presentation</td><td>encryption, compression, translation</td></tr>
+<tr><td>5</td><td>Session</td><td>session / dialogue control</td></tr>
+<tr><td>4</td><td>Transport</td><td>TCP, UDP; end-to-end delivery</td></tr>
+<tr><td>3</td><td>Network</td><td>IP, routing, logical address</td></tr>
+<tr><td>2</td><td>Data link</td><td>MAC address, framing, error detection</td></tr>
+<tr><td>1</td><td>Physical</td><td>bits, cables, signals</td></tr>
+</table>
+<p>Memory trick / याद रखने की ट्रिक: <b>P</b>lease <b>D</b>o <b>N</b>ot <b>T</b>hrow <b>S</b>ausage <b>P</b>izza <b>A</b>way (1→7).</p>
+<ul>
+<li>TCP/IP model has 4 layers: Application, Transport, Internet, Network access.</li>
+<li>TCP: reliable, connection-oriented. UDP: unreliable, connectionless, faster (video streaming).</li>
+<li>IPv4 = 32-bit (e.g., 192.168.1.1), IPv6 = 128-bit. MAC address = 48-bit physical address.</li>
+<li>IP classes: A (1–126), B (128–191), C (192–223), D (multicast 224–239), E (reserved).</li>
+<li>Ports: HTTP 80, HTTPS 443, FTP 21, SSH 22, SMTP 25, DNS 53, POP3 110, Telnet 23.</li>
+<li>DNS converts domain names to IP address. DHCP assigns IP automatically. ARP maps IP → MAC.</li>
+<li>Transmission modes: simplex (one way), half duplex (both ways, one at a time), full duplex (both ways at once).</li>
+<li>Media: twisted pair, coaxial, optical fibre (fastest, no EMI), wireless (Wi-Fi, Bluetooth, microwave).</li>
+</ul>
+
+<!-- ============ 9 ============ -->
+<h2>9. Internet, Web &amp; Security / इंटरनेट, वेब और सुरक्षा</h2>
+<ul>
+<li>WWW invented by Tim Berners-Lee (1989–91). Browser examples: Chrome, Firefox, Edge. URL = protocol + domain + path.</li>
+<li>HTML = markup language for web pages; tags: &lt;h1&gt;–&lt;h6&gt;, &lt;p&gt;, &lt;a href&gt;, &lt;img src&gt;, &lt;table&gt;, &lt;ul&gt;/&lt;ol&gt;, &lt;form&gt;. CSS styles the page; JavaScript adds behaviour. <span class="hi">HTML वेब पेज की संरचना बनाती है, CSS सजावट, JavaScript व्यवहार।</span></li>
+<li>Email: SMTP sends; POP3/IMAP receive. To, Cc, Bcc (hidden recipients).</li>
+<li>Security threats: virus, worm (self-replicating), trojan (disguised), ransomware, spyware, phishing (fake emails/sites), spoofing, DoS/DDoS, man-in-the-middle.</li>
+<li>Protection: antivirus, firewall, strong passwords, two-factor authentication, encryption (symmetric: one key – AES/DES; asymmetric: public + private key – RSA), digital signature, HTTPS/SSL/TLS.</li>
+<li>Cyber crime law in India: IT Act 2000. E-commerce, UPI, digital India, e-governance, cloud computing (IaaS, PaaS, SaaS), IoT, AI, Big Data, blockchain – basic definitions are often asked.</li>
+<li>MS Office shortcuts: Ctrl+C copy, Ctrl+X cut, Ctrl+V paste, Ctrl+Z undo, Ctrl+Y redo, Ctrl+S save, Ctrl+P print, Ctrl+A select all, Ctrl+B/I/U bold/italic/underline, F12 Save As (Word). Excel: formulas start with "=", e.g. =SUM(A1:A5), =AVERAGE(), =IF(), =VLOOKUP(); cell reference A1; extension .xlsx; Word .docx; PowerPoint .pptx.</li>
+</ul>
+
+<!-- ============ 10 ============ -->
+<h2>10. OOP, C++ &amp; Python / ओओपी, C++ और पाइथन</h2>
+<ul>
+<li>OOP pillars: <b>Encapsulation</b> (data hiding in class), <b>Abstraction</b>, <b>Inheritance</b> (reuse; single, multiple, multilevel, hierarchical, hybrid), <b>Polymorphism</b> (compile-time: overloading; run-time: overriding, virtual function).</li>
+<li>C++ was created by Bjarne Stroustrup. Class members default to private (struct → public). Constructor has the same name as the class, no return type; destructor uses ~ClassName. Access specifiers: private, protected, public.</li>
+<li>Java: platform independent via bytecode and JVM; no pointers; garbage collection. Developed by James Gosling at Sun.</li>
+</ul>
+<h3>Python basics</h3>
+<ul>
+<li>Interpreted, dynamically typed, indentation defines blocks. Created by Guido van Rossum. Comments start with #.</li>
+<li>Data types: int, float, str, bool, list [ ] (mutable), tuple ( ) (immutable), set { } (unique), dict {key: value}.</li>
+<li>Loops: for i in range(5) → 0..4; while; break/continue. Functions: def f(x): return x*2.</li>
+</ul>
+<pre>nums = [1, 2, 3, 4]
+print(nums[-1])            # 4
+print(nums[1:3])           # [2, 3]
+print([x*x for x in nums]) # [1, 4, 9, 16]
+d = {"a": 1}; d["b"] = 2
+print(len(d))              # 2
+print(10 // 3, 10 % 3, 2 ** 3)   # 3 1 8</pre>
+
+<!-- ============ PRACTICE ============ -->
+<h2 class="pb">11. Practice MCQs / अभ्यास प्रश्न</h2>
+<p>Answers are given at the end of this section. / उत्तर इस भाग के अंत में दिए गए हैं।</p>
+
+<div class="q"><b>1.</b> Which gate is called a universal gate? / कौन-सा गेट यूनिवर्सल गेट कहलाता है?<br>(A) AND (B) OR (C) NAND (D) XOR</div>
+<div class="q"><b>2.</b> Binary of decimal 25 / दशमलव 25 का बाइनरी:<br>(A) 11001 (B) 10011 (C) 11010 (D) 10101</div>
+<div class="q"><b>3.</b> Hexadecimal digit F equals decimal / हेक्साडेसिमल F का दशमलव मान:<br>(A) 14 (B) 15 (C) 16 (D) 13</div>
+<div class="q"><b>4.</b> How many select lines are needed for a 16-to-1 multiplexer? / 16-to-1 मल्टीप्लेक्सर में कितनी सेलेक्ट लाइनें?<br>(A) 2 (B) 3 (C) 4 (D) 8</div>
+<div class="q"><b>5.</b> Which memory is volatile? / कौन-सी मेमोरी वोलाटाइल है?<br>(A) ROM (B) RAM (C) PROM (D) EPROM</div>
+<div class="q"><b>6.</b> Fastest memory in a computer / कंप्यूटर की सबसे तेज मेमोरी:<br>(A) RAM (B) Cache (C) Register (D) Hard disk</div>
+<div class="q"><b>7.</b> Output of 7/2 in C (int) / C में 7/2 का आउटपुट:<br>(A) 3.5 (B) 3 (C) 4 (D) 2</div>
+<div class="q"><b>8.</b> A C string ends with / C स्ट्रिंग किससे समाप्त होती है:<br>(A) '\n' (B) '\0' (C) ' ' (D) EOF</div>
+<div class="q"><b>9.</b> Which loop executes at least once? / कौन-सा लूप कम से कम एक बार चलता है?<br>(A) for (B) while (C) do-while (D) none</div>
+<div class="q"><b>10.</b> Which function allocates zero-initialised memory? / शून्य से प्रारंभ की गई मेमोरी कौन-सा फ़ंक्शन देता है?<br>(A) malloc (B) calloc (C) realloc (D) free</div>
+<div class="q"><b>11.</b> Stack follows / स्टैक किस सिद्धांत पर चलता है:<br>(A) FIFO (B) LIFO (C) Random (D) Priority</div>
+<div class="q"><b>12.</b> Inorder traversal of a BST gives / BST का इनऑर्डर ट्रैवर्सल देता है:<br>(A) Reverse order (B) Sorted order (C) Level order (D) Random order</div>
+<div class="q"><b>13.</b> Postfix value of 2 3 4 * + / पोस्टफिक्स 2 3 4 * + का मान:<br>(A) 14 (B) 20 (C) 9 (D) 24</div>
+<div class="q"><b>14.</b> Number of edges in a spanning tree of 10 vertices / 10 शीर्षों वाले ग्राफ के स्पैनिंग ट्री में किनारे:<br>(A) 10 (B) 9 (C) 11 (D) 45</div>
+<div class="q"><b>15.</b> Data structure used in BFS / BFS में प्रयुक्त डेटा स्ट्रक्चर:<br>(A) Stack (B) Queue (C) Tree (D) Array</div>
+<div class="q"><b>16.</b> Worst case time of binary search / बाइनरी सर्च का सबसे खराब समय:<br>(A) O(n) (B) O(log n) (C) O(n log n) (D) O(1)</div>
+<div class="q"><b>17.</b> Merge sort is based on / मर्ज सॉर्ट आधारित है:<br>(A) Greedy (B) Divide and Conquer (C) Dynamic programming (D) Backtracking</div>
+<div class="q"><b>18.</b> Worst case of quick sort / क्विक सॉर्ट का सबसे खराब समय:<br>(A) O(n log n) (B) O(n) (C) O(n²) (D) O(log n)</div>
+<div class="q"><b>19.</b> Which is NOT a necessary condition for deadlock? / डेडलॉक की आवश्यक शर्त कौन-सी नहीं है?<br>(A) Mutual exclusion (B) Hold and wait (C) Preemption (D) Circular wait</div>
+<div class="q"><b>20.</b> Banker's algorithm is used for / बैंकर्स एल्गोरिदम का उपयोग:<br>(A) Deadlock avoidance (B) Paging (C) Scheduling (D) Sorting</div>
+<div class="q"><b>21.</b> Excessive paging activity is called / अत्यधिक पेजिंग को कहते हैं:<br>(A) Spooling (B) Thrashing (C) Fragmentation (D) Caching</div>
+<div class="q"><b>22.</b> Page size 8 KB → number of offset bits / पेज साइज 8 KB → ऑफसेट बिट्स:<br>(A) 12 (B) 13 (C) 14 (D) 10</div>
+<div class="q"><b>23.</b> Scheduling algorithm with time quantum / टाइम क्वांटम वाला शेड्यूलिंग एल्गोरिदम:<br>(A) FCFS (B) SJF (C) Round Robin (D) Priority</div>
+<div class="q"><b>24.</b> Which key uniquely identifies a row and cannot be NULL? / कौन-सी की पंक्ति को अद्वितीय पहचानती है और NULL नहीं हो सकती?<br>(A) Foreign key (B) Primary key (C) Alternate key (D) Super key</div>
+<div class="q"><b>25.</b> Which SQL clause filters groups? / कौन-सा SQL क्लॉज़ समूहों को फ़िल्टर करता है?<br>(A) WHERE (B) HAVING (C) ORDER BY (D) LIMIT</div>
+<div class="q"><b>26.</b> Which is a DDL command? / DDL कमांड कौन-सा है?<br>(A) INSERT (B) UPDATE (C) ALTER (D) SELECT</div>
+<div class="q"><b>27.</b> 3NF removes / 3NF हटाता है:<br>(A) Partial dependency (B) Transitive dependency (C) Multivalued attribute (D) Foreign key</div>
+<div class="q"><b>28.</b> ACID: the letter 'I' stands for / ACID में 'I':<br>(A) Integrity (B) Isolation (C) Indexing (D) Inheritance</div>
+<div class="q"><b>29.</b> Which layer of OSI handles routing? / OSI की कौन-सी परत रूटिंग करती है?<br>(A) Data link (B) Transport (C) Network (D) Session</div>
+<div class="q"><b>30.</b> Default port of HTTPS / HTTPS का डिफ़ॉल्ट पोर्ट:<br>(A) 80 (B) 21 (C) 443 (D) 25</div>
+<div class="q"><b>31.</b> IPv6 address size / IPv6 पते का आकार:<br>(A) 32 bit (B) 64 bit (C) 128 bit (D) 256 bit</div>
+<div class="q"><b>32.</b> Which device works with MAC addresses? / कौन-सा उपकरण MAC पते से काम करता है?<br>(A) Hub (B) Switch (C) Repeater (D) Modem</div>
+<div class="q"><b>33.</b> Protocol used for sending email / ईमेल भेजने वाला प्रोटोकॉल:<br>(A) POP3 (B) IMAP (C) SMTP (D) FTP</div>
+<div class="q"><b>34.</b> Self-replicating malware that spreads over a network / नेटवर्क पर स्वयं फैलने वाला मैलवेयर:<br>(A) Worm (B) Trojan (C) Spyware (D) Adware</div>
+<div class="q"><b>35.</b> RSA is a / RSA है:<br>(A) Symmetric key algorithm (B) Asymmetric key algorithm (C) Hash function (D) Compression method</div>
+<div class="q"><b>36.</b> Which is not an OOP principle? / कौन-सा OOP सिद्धांत नहीं है?<br>(A) Encapsulation (B) Inheritance (C) Compilation (D) Polymorphism</div>
+<div class="q"><b>37.</b> Python output of print(10 // 3) / पाइथन में print(10 // 3):<br>(A) 3.33 (B) 3 (C) 4 (D) 1</div>
+<div class="q"><b>38.</b> Which Python type is immutable? / कौन-सा पाइथन टाइप अपरिवर्तनीय है?<br>(A) list (B) dict (C) tuple (D) set</div>
+<div class="q"><b>39.</b> Shortcut for Undo in MS Word / MS Word में Undo का शॉर्टकट:<br>(A) Ctrl+Y (B) Ctrl+Z (C) Ctrl+U (D) Ctrl+X</div>
+<div class="q"><b>40.</b> Extension of Excel 2007+ file / एक्सेल 2007+ फाइल का एक्सटेंशन:<br>(A) .xls (B) .xlsx (C) .docx (D) .pptx</div>
+
+<div class="box"><b>Answers / उत्तर:</b>
+1-C, 2-A (16+8+1=25), 3-B, 4-C (2⁴=16), 5-B, 6-C, 7-B, 8-B, 9-C, 10-B,
+11-B, 12-B, 13-A (3×4=12, +2=14), 14-B (N−1), 15-B, 16-B, 17-B, 18-C, 19-C (Preemption is allowed → "No preemption" is the condition), 20-A,
+21-B, 22-B (8KB=2¹³), 23-C, 24-B, 25-B, 26-C, 27-B, 28-B, 29-C, 30-C,
+31-C, 32-B, 33-C, 34-A, 35-B, 36-C, 37-B, 38-C, 39-B, 40-B</div>
+
+<!-- ============ SOLVED PYQ ============ -->
+<h2 class="pb">12. Solved previous-year questions / हल किए गए पिछले वर्ष के प्रश्न</h2>
+<p>From the BPSC Class 11–12 Computer Science paper (22 July 2024) in your <b>papers</b> folder. Question numbers match that paper. Only questions whose answer could be worked out with certainty are listed here — for the rest, use the official answer-key PDFs in the same folder.<br>
+<span class="hi">ये प्रश्न papers फ़ोल्डर के 22 जुलाई 2024 वाले पेपर से हैं। बाकी प्रश्नों के लिए उसी फ़ोल्डर की Answer Key देखें।</span></p>
+<table>
+<tr><th>Q.</th><th>Question</th><th>Answer / Working</th></tr>
+<tr><td>76</td><td>1010 AND 1100 in binary</td><td><b>(A) 1000</b> — bit-wise AND</td></tr>
+<tr><td>80</td><td>Select lines for an 8-to-1 multiplexer</td><td><b>(B) 3</b> — 2³ = 8</td></tr>
+<tr><td>81</td><td>Decimal 1234 → binary, octal, hex</td><td><b>(A)</b> binary 10011010010, octal 2322, hex 4D2</td></tr>
+<tr><td>82</td><td>Booth's algorithm is used for</td><td><b>(C)</b> binary multiplication</td></tr>
+<tr><td>83</td><td>Error detection code in digital logic</td><td><b>(D)</b> more than one — Hamming, CRC and checksum are all used</td></tr>
+<tr><td>85</td><td>1011.1101 (binary) → decimal</td><td>8+2+1+0.5+0.25+0.0625 = 11.8125 → none of 11.75 / 12.125 / 13.5 → <b>(E)</b></td></tr>
+<tr><td>86</td><td>De Morgan's theorem is used for</td><td><b>(A)</b> simplifying Boolean expressions (it also helps implement with NAND gates, so check the official key for (A) vs (D))</td></tr>
+<tr><td>88</td><td>Non-linear data structure</td><td>Tree/graph — none of Stack, Queue, Array → <b>(E)</b></td></tr>
+<tr><td>92</td><td>Balanced binary tree: subtree height difference at most</td><td><b>(B) 1</b></td></tr>
+<tr><td>96</td><td>Preorder 15,10,12,11,20,18,16,19 → postorder</td><td>Root 15; left subtree {10,12,11}; right {20,18,16,19} → <b>(B) 11,12,10,16,19,18,20,15</b></td></tr>
+<tr><td>97</td><td>Distinct BSTs with 4 keys</td><td>Catalan C₄ = 14 → <b>(C)</b></td></tr>
+<tr><td>99</td><td>Big-O notation</td><td><b>(B)</b> upper bound of runtime</td></tr>
+<tr><td>101</td><td>Merge sort paradigm</td><td><b>(B)</b> Divide and Conquer</td></tr>
+<tr><td>102</td><td>Edges of spanning tree with N vertices</td><td><b>(B) N − 1</b></td></tr>
+<tr><td>112</td><td>Page size 4 KB: page offset bits</td><td>4 KB = 2¹² → <b>(B) 12 bits</b></td></tr>
+<tr><td>114</td><td>Cause of thrashing</td><td><b>(A)</b> excessive paging activity</td></tr>
+<tr><td>116</td><td>TLB organisation</td><td>Typically an associative cache; check the official key (B vs C)</td></tr>
+</table>
+
+<h3>Study plan / पढ़ाई की योजना</h3>
+<ul>
+<li>Week 1: chapters 1–2 + 20 PYQs from the papers folder. <span class="hi">सप्ताह 1: अध्याय 1–2।</span></li>
+<li>Week 2: chapters 3–5 (C, data structures, algorithms) — write and trace small programs by hand.</li>
+<li>Week 3: chapters 6–7 (OS, DBMS) — practise SQL queries on paper.</li>
+<li>Week 4: chapters 8–10, then solve one full previous-year paper in a timed mode (2.5 hours, 150 questions).</li>
+<li>Always check the official syllabus and notification on bpsc.bihar.gov.in. <span class="hi">अंतिम पाठ्यक्रम BPSC की वेबसाइट से जाँचें।</span></li>
+</ul>
+
+</body>
+</html>
