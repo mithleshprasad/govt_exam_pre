@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Govt Exam English — Vocabulary with Hindi (Exam Only)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    padding: 14px;
+    color: #2d3748;
+  }
+  .container {
+    max-width: 1100px; margin: 0 auto; background: #fff;
+    border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); overflow: hidden;
+  }
+  header {
+    background: linear-gradient(135deg, #0f2027, #6a3093);
+    color: #fff; padding: 22px; text-align: center;
+  }
+  header h1 { font-size: 1.5em; margin-bottom: 4px; }
+  header p { opacity: 0.85; font-size: 0.88em; }
+  .stats-bar {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 12px 16px; background: #f7fafc;
+    border-bottom: 1px solid #e2e8f0; font-size: 0.84em;
+  }
+  .stat {
+    flex: 1; min-width: 100px; background: #fff;
+    padding: 8px 10px; border-radius: 10px;
+    border: 1px solid #e2e8f0; text-align: center;
+  }
+  .stat b { display: block; font-size: 1.15em; color: #6a3093; }
+  .stat span { color: #718096; font-size: 0.76em; }
+  .main-tabs {
+    display: flex; overflow-x: auto;
+    background: #edf2f7; border-bottom: 2px solid #cbd5e0;
+  }
+  .main-tab {
+    flex: 1; min-width: 100px; padding: 11px 6px;
+    text-align: center; cursor: pointer;
+    font-weight: 700; font-size: 0.82em; color: #4a5568;
+    border-bottom: 3px solid transparent;
+    white-space: nowrap; transition: all 0.2s;
+  }
+  .main-tab:hover { background: #e2e8f0; }
+  .main-tab.active {
+    color: #6a3093; background: #fff; border-bottom-color: #6a3093;
+  }
+  .content { padding: 18px; }
+  .panel { display: none; animation: fadeIn 0.3s; }
+  .panel.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px);} to { opacity:1; transform:none;} }
+  h2 { color: #6a3093; margin-bottom: 6px; font-size: 1.25em; }
+  .subtitle { color: #718096; font-size: 0.86em; margin-bottom: 12px; }
+  h3 { color: #2d3748; margin: 14px 0 8px; font-size: 1em; }
+  p { line-height: 1.6; margin-bottom: 10px; font-size: 0.94em; }
+  .example {
+    background: #f0f4ff; border-left: 4px solid #667eea;
+    padding: 8px 12px; border-radius: 6px; margin: 6px 0;
+    font-style: italic; font-size: 0.9em;
+  }
+  .example strong { color: #4c51bf; font-style: normal; }
+  .tip {
+    background: #fefcbf; border-left: 4px solid #ecc94b;
+    padding: 8px 12px; border-radius: 6px; margin: 10px 0; font-size: 0.9em;
+  }
+  .tip::before { content: "💡 "; }
+  .trap {
+    background: #fff5f5; border-left: 4px solid #f56565;
+    padding: 8px 12px; border-radius: 6px; margin: 10px 0; font-size: 0.9em;
+  }
+  .trap::before { content: "⚠️ Exam Trap: "; font-weight: 700; color: #c53030; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.87em; }
+  th, td { padding: 7px 9px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+  th { background: #6a3093; color: #fff; }
+  tr:nth-child(even) { background: #f7fafc; }
+  .levels {
+    display: flex; overflow-x: auto; background: #edf2f7;
+    border-bottom: 2px solid #e2e8f0; margin-bottom: 12px; border-radius: 8px;
+  }
+  .level-tab {
+    flex: 0 0 auto; padding: 9px 12px; cursor: pointer;
+    font-weight: 600; font-size: 0.8em; color: #718096;
+    border-bottom: 3px solid transparent; white-space: nowrap;
+  }
+  .level-tab:hover { background: #e2e8f0; }
+  .level-tab.active { color: #6a3093; background: #fff; border-bottom-color: #6a3093; }
+  .level-tab.locked { opacity: 0.4; cursor: not-allowed; }
+  .level-tab .badge {
+    display: inline-block; margin-left: 5px; font-size: 0.75em;
+    padding: 1px 6px; border-radius: 10px; background: #cbd5e0;
+  }
+  .level-tab.done .badge { background: #48bb78; color: #fff; }
+  .btn {
+    padding: 9px 18px; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: 700; font-size: 0.9em;
+  }
+  .btn-primary { background: #6a3093; color: #fff; }
+  .btn-primary:hover { background: #4c2270; }
+  .btn-success { background: #38a169; color: #fff; }
+  .btn-outline { background: #fff; color: #6a3093; border: 2px solid #6a3093; }
+  .btn-outline:hover { background: #f0e6f8; }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-sm { padding: 6px 12px; font-size: 0.82em; }
+  .center { text-align: center; margin-top: 14px; }
+  .quiz-header {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 8px; margin-bottom: 10px;
+  }
+  .timer {
+    font-weight: 700; color: #e53e3e; background: #fff5f5;
+    padding: 5px 12px; border-radius: 20px; font-size: 0.9em;
+  }
+  .quiz-question {
+    background: #f7fafc; padding: 12px 14px;
+    border-radius: 10px; margin-bottom: 10px; border: 1px solid #e2e8f0;
+  }
+  .quiz-question p.qtext { font-weight: 600; margin-bottom: 8px; font-size: 0.94em; }
+  .option {
+    display: block; padding: 8px 12px; margin: 4px 0;
+    background: #fff; border: 2px solid #e2e8f0;
+    border-radius: 8px; cursor: pointer; font-size: 0.9em; transition: all 0.15s;
+  }
+  .option:hover { border-color: #6a3093; background: #f5eefa; }
+  .option.correct { border-color: #48bb78; background: #f0fff4; }
+  .option.wrong { border-color: #f56565; background: #fff5f5; }
+  .option.disabled { pointer-events: none; }
+  .feedback { margin-top: 5px; font-weight: 600; font-size: 0.84em; }
+  .feedback.correct { color: #38a169; }
+  .feedback.wrong { color: #e53e3e; }
+  .progress-bar {
+    height: 8px; background: #e2e8f0; border-radius: 4px;
+    overflow: hidden; margin: 10px 0;
+  }
+  .progress-fill {
+    height: 100%; background: linear-gradient(90deg, #48bb78, #38a169);
+    width: 0%; transition: width 0.4s;
+  }
+  .result-box {
+    background: linear-gradient(135deg, #f0e6f8, #e9d8fd);
+    padding: 18px; border-radius: 12px; text-align: center; margin-top: 14px;
+  }
+  .result-box h3 { color: #6a3093; font-size: 1.25em; margin-bottom: 6px; }
+  .result-box .big { font-size: 2em; font-weight: 800; color: #2d3748; }
+  .result-box p { margin: 5px 0; color: #4a5568; }
+  .hidden { display: none; }
+  .hint { color: #718096; font-size: 0.84em; }
+  .vocab-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 10px; margin-top: 12px;
+  }
+  .vocab-card {
+    background: #fff; border: 1px solid #e2e8f0;
+    border-radius: 10px; padding: 10px 12px; font-size: 0.86em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+  .vocab-card .word { font-weight: 800; color: #6a3093; font-size: 1.05em; }
+  .vocab-card .hindi { color: #2b6cb0; font-weight: 700; margin: 2px 0; font-size: 0.95em; }
+  .vocab-card .meaning { color: #2d3748; margin: 3px 0; font-size: 0.9em; }
+  .vocab-card .syn, .vocab-card .ant { font-size: 0.83em; color: #4a5568; }
+  .vocab-card .syn b { color: #38a169; }
+  .vocab-card .ant b { color: #e53e3e; }
+  .vocab-card .tag {
+    display: inline-block; font-size: 0.7em; background: #e9d8fd;
+    color: #6a3093; padding: 1px 7px; border-radius: 8px; margin-top: 4px;
+  }
+  .search-box { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .search-box input {
+    flex: 1; min-width: 170px; padding: 9px 12px;
+    border: 2px solid #e2e8f0; border-radius: 8px;
+    font-size: 0.9em; outline: none;
+  }
+  .search-box input:focus { border-color: #6a3093; }
+  .search-box select {
+    padding: 9px 12px; border: 2px solid #e2e8f0;
+    border-radius: 8px; font-size: 0.9em; background: #fff;
+  }
+  .filter-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .filter-chip {
+    padding: 5px 12px; border-radius: 16px; background: #edf2f7;
+    color: #4a5568; font-size: 0.8em; cursor: pointer;
+    font-weight: 600; border: 2px solid transparent;
+  }
+  .filter-chip.active { background: #6a3093; color: #fff; }
+  .passage-box {
+    background: #f7fafc; border: 1px solid #e2e8f0;
+    border-radius: 10px; padding: 14px 16px; font-size: 0.91em;
+    line-height: 1.7; margin-bottom: 12px;
+  }
+  .passage-box h4 { color: #6a3093; margin-bottom: 8px; }
+  .vocab-count {
+    display: inline-block; background: #6a3093; color: #fff;
+    padding: 2px 9px; border-radius: 12px; font-size: 0.76em;
+    font-weight: 700; margin-left: 6px;
+  }
+  .hindi-badge {
+    display: inline-block; background: #bee3f8; color: #2b6cb0;
+    padding: 1px 7px; border-radius: 8px; font-size: 0.72em;
+    font-weight: 700; margin-left: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>🎯 Govt Exam English — Exam Only</h1>
+    <p>Vocabulary (with Hindi) • Grammar • Passages • One-Word • Synonyms • Antonyms</p>
+  </header>
+
+  <div class="stats-bar">
+    <div class="stat"><b id="stat-level">1</b><span>Grammar Level</span></div>
+    <div class="stat"><b id="stat-score">0%</b><span>Progress</span></div>
+    <div class="stat"><b id="stat-vocab">0</b><span>Exam Words</span></div>
+    <div class="stat"><b id="stat-unlocked">1 / 8</b><span>Levels Unlocked</span></div>
+  </div>
+
+  <div class="main-tabs">
+    <div class="main-tab active" data-panel="grammar">📚 Grammar</div>
+    <div class="main-tab" data-panel="vocab">📖 Vocabulary</div>
+    <div class="main-tab" data-panel="synant">🔄 Syn/Ant</div>
+    <div class="main-tab" data-panel="oneword">🔑 One-Word</div>
+    <div class="main-tab" data-panel="passage">📄 Passages</div>
+  </div>
+
+  <div class="content">
+    <!-- GRAMMAR -->
+    <div class="panel active" id="grammar">
+      <h2>Grammar — Level 0 → Advanced</h2>
+      <p class="subtitle">Complete the quiz at 70%+ to unlock the next level.</p>
+      <div class="levels" id="levelTabs"></div>
+      <div id="grammarContent"></div>
+    </div>
+
+    <!-- VOCABULARY -->
+    <div class="panel" id="vocab">
+      <h2>Exam Vocabulary <span class="vocab-count" id="vocabTotal">0</span> <span class="hindi-badge">हिंदी अर्थ सहित</span></h2>
+      <p class="subtitle">Only exam-relevant words (SSC / UPSC / Banking / Railways / State PSC).</p>
+      <div class="search-box">
+        <input type="text" id="vocabSearch" placeholder="🔍 Search word, meaning, or Hindi..." />
+        <select id="vocabLetter"><option value="">All letters</option></select>
+        <select id="vocabLevel">
+          <option value="">All levels</option>
+          <option value="basic">Basic</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+      </div>
+      <div class="filter-row" id="vocabChips"></div>
+      <div id="vocabList" class="vocab-grid"></div>
+      <div class="center" id="vocabMoreWrap" style="margin-top:14px;"></div>
+    </div>
+
+    <!-- SYN/ANT -->
+    <div class="panel" id="synant">
+      <h2>Synonyms & Antonyms — Quiz</h2>
+      <p class="subtitle">Exam-style questions from the vocabulary bank.</p>
+      <div class="center" style="margin-bottom:14px;">
+        <button class="btn btn-primary" onclick="startSynAntQuiz('synonym')">Start Synonyms Quiz</button>
+        <button class="btn btn-outline" style="margin-left:8px;" onclick="startSynAntQuiz('antonym')">Start Antonyms Quiz</button>
+      </div>
+      <div id="synantArea"></div>
+    </div>
+
+    <!-- ONE-WORD -->
+    <div class="panel" id="oneword">
+      <h2>One-Word Substitutions</h2>
+      <p class="subtitle">High-frequency one-word substitutions for SSC / UPSC / Banking.</p>
+      <div class="search-box">
+        <input type="text" id="owSearch" placeholder="🔍 Search one-word substitution..." />
+      </div>
+      <div id="owList"></div>
+    </div>
+
+    <!-- PASSAGES -->
+    <div class="panel" id="passage">
+      <h2>Reading Comprehension Passages</h2>
+      <p class="subtitle">Exam-style passages with questions.</p>
+      <div class="filter-row" id="passageChips"></div>
+      <div id="passageArea"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   GRAMMAR LEVELS (exam-relevant only)
+   ========================================================= */
+const LEVELS = [
+  { id:0, name:"L0 · Basics", title:"Level 0 — Grammar Foundations",
+    subtitle:"Parts of speech, sentence structure, basics.",
+    theory:`<h3>Parts of speech</h3><table><tr><th>Part</th><th>Example</th></tr><tr><td>Noun</td><td>Ravi, Delhi, book</td></tr><tr><td>Pronoun</td><td>he, she, they</td></tr><tr><td>Verb</td><td>run, is, seem</td></tr><tr><td>Adjective</td><td>tall, red</td></tr><tr><td>Adverb</td><td>quickly, very</td></tr><tr><td>Preposition</td><td>in, on, at</td></tr><tr><td>Conjunction</td><td>and, but, because</td></tr><tr><td>Interjection</td><td>wow, alas</td></tr></table><div class="tip">Subject + Verb = a sentence. Add -s for he/she/it in present simple.</div>`,
+    questions:[
+      {q:"Choose the correct sentence.",options:["She go to school.","She goes to school.","She going to school.","She gone to school."],correct:1,explain:"She → goes (third-person singular)."},
+      {q:"Identify the noun: 'The tall boy ran quickly.'",options:["tall","ran","boy","quickly"],correct:2,explain:"'Boy' is a noun."},
+      {q:"Plural of 'child'?",options:["childs","children","childes","childrens"],correct:1,explain:"Irregular plural."},
+      {q:"Which is a pronoun?",options:["table","she","run","happy"],correct:1,explain:"'She' replaces a noun."},
+      {q:"'They ___ football every Sunday.'",options:["plays","play","playing","played"],correct:1,explain:"Plural subject → play."}
+    ]
+  },
+  { id:1, name:"L1 · Tenses", title:"Level 1 — The 12 Tenses",
+    subtitle:"All tenses with structure and exam traps.",
+    theory:`<h3>Tense grid</h3><table><tr><th></th><th>Simple</th><th>Continuous</th><th>Perfect</th></tr><tr><td>Present</td><td>V1/V1+s</td><td>am/is/are + V-ing</td><td>has/have + V3</td></tr><tr><td>Past</td><td>V2</td><td>was/were + V-ing</td><td>had + V3</td></tr><tr><td>Future</td><td>will + V1</td><td>will be + V-ing</td><td>will have + V3</td></tr></table><div class="trap">Since + point of time, for + duration → Present Perfect Continuous.</div><div class="trap">After 'if, when, until' use present simple for future: <em>When he comes, I'll tell him.</em></div>`,
+    questions:[
+      {q:"She ___ since 2019.",options:["works","worked","has been working","is working"],correct:2,explain:"Since + ongoing → present perfect continuous."},
+      {q:"By the time we reached, the train ___.",options:["left","has left","had left","leaves"],correct:2,explain:"Earlier of two past actions → past perfect."},
+      {q:"Water ___ at 100°C.",options:["boil","boils","is boiling","boiled"],correct:1,explain:"Universal fact → present simple."},
+      {q:"I ___ him tomorrow.",options:["meet","met","will meet","am meeting"],correct:2,explain:"Tomorrow → future simple."},
+      {q:"When I called, they ___ dinner.",options:["have","had","were having","will have"],correct:2,explain:"Past continuous."},
+      {q:"He ___ his homework before he went out.",options:["does","did","had done","will do"],correct:2,explain:"Past perfect."},
+      {q:"Look! It ___ outside.",options:["rains","rained","is raining","has rained"],correct:2,explain:"Happening now → present continuous."}
+    ]
+  },
+  { id:2, name:"L2 · Articles", title:"Level 2 — Articles (a/an/the)",
+    subtitle:"Sound rules, unique items, common traps.",
+    theory:`<h3>a / an</h3><div class="tip">Use <b>an</b> before a vowel <em>sound</em>: an hour, an MP, a university, a European.</div><h3>the</h3><div class="example">the sun, the Ganga, the Himalayas, the best student</div><div class="trap">Superlatives always take 'the'.</div><div class="trap">Abstract nouns generally take no article: <em>Honesty is the best policy.</em></div>`,
+    questions:[
+      {q:"She is ___ honest girl.",options:["a","an","the","no article"],correct:1,explain:"Vowel sound → an."},
+      {q:"He is ___ European.",options:["a","an","the","no article"],correct:0,explain:"Consonant /y/ sound → a."},
+      {q:"___ Ganga is sacred.",options:["A","An","The","No article"],correct:2,explain:"Rivers take 'the'."},
+      {q:"___ honesty is the best policy.",options:["A","An","The","No article"],correct:3,explain:"Abstract general → no article."},
+      {q:"She is ___ best player.",options:["a","an","the","no article"],correct:2,explain:"Superlative → the."},
+      {q:"I waited for ___ hour.",options:["a","an","the","no article"],correct:1,explain:"Silent h → an."}
+    ]
+  },
+  { id:3, name:"L3 · Prepositions", title:"Level 3 — Prepositions",
+    subtitle:"Time, place, direction, collocations.",
+    theory:`<h3>Time</h3><table><tr><th>Prep</th><th>Use</th><th>Example</th></tr><tr><td>in</td><td>months, years, seasons</td><td>in July, in 2025</td></tr><tr><td>on</td><td>days, dates</td><td>on Monday</td></tr><tr><td>at</td><td>exact time</td><td>at 5pm</td></tr></table><div class="trap">'Discuss' takes no preposition: discuss the matter.</div><div class="trap">'Comprise' takes no 'of'.</div><div class="trap">Married <b>to</b>, angry <b>with</b> (person), angry <b>at</b> (thing).</div>`,
+    questions:[
+      {q:"We will meet ___ Monday.",options:["in","on","at","for"],correct:1,explain:"Days → on."},
+      {q:"She has been ill ___ last week.",options:["for","since","from","at"],correct:1,explain:"Since + point."},
+      {q:"He has lived here ___ ten years.",options:["since","for","from","in"],correct:1,explain:"For + duration."},
+      {q:"Let's discuss ___ the plan.",options:["about","on","the","no preposition"],correct:3,explain:"Discuss takes no prep."},
+      {q:"The team comprises ___ five.",options:["of","with","in","no preposition"],correct:3,explain:"Comprise takes no 'of'."},
+      {q:"She is married ___ a doctor.",options:["with","to","by","for"],correct:1,explain:"Married to."}
+    ]
+  },
+  { id:4, name:"L4 · S-V Agreement", title:"Level 4 — Subject–Verb Agreement",
+    subtitle:"The rule that decides dozens of exam questions.",
+    theory:`<div class="example"><b>Each/Every/Either/Neither</b> + singular verb.</div><div class="example"><b>Neither…nor/Either…or</b> → verb agrees with nearer subject.</div><div class="example"><b>As well as/along with</b> → verb agrees with first subject.</div><div class="example"><b>Collective nouns</b> → singular (usually).</div><div class="trap">'A number of' → plural; 'The number of' → singular.</div><div class="trap">'One of the + plural noun' → singular verb.</div>`,
+    questions:[
+      {q:"Each of the boys ___ a prize.",options:["have","has","are","were"],correct:1,explain:"Each → singular."},
+      {q:"Neither the teacher nor the students ___ present.",options:["was","were","is","has"],correct:1,explain:"Nearer subject = students → were."},
+      {q:"The manager, along with his staff, ___ arriving.",options:["are","is","were","have"],correct:1,explain:"Along with doesn't change subject."},
+      {q:"The news ___ disturbing.",options:["are","were","is","have"],correct:2,explain:"News is uncountable → singular."},
+      {q:"One of my friends ___ a doctor.",options:["are","were","is","have"],correct:2,explain:"One of the + plural → singular."},
+      {q:"A number of students ___ absent.",options:["is","was","are","has"],correct:2,explain:"A number of → plural."}
+    ]
+  },
+  { id:5, name:"L5 · Voice/Narration", title:"Level 5 — Voice & Narration",
+    subtitle:"Active/passive and direct/indirect speech.",
+    theory:`<h3>Active → Passive</h3><div class="example">Ram wrote a letter → A letter was written by Ram.</div><table><tr><th>Tense</th><th>Passive</th></tr><tr><td>Present Simple</td><td>is/am/are + V3</td></tr><tr><td>Past Simple</td><td>was/were + V3</td></tr><tr><td>Present Perfect</td><td>has/have been + V3</td></tr><tr><td>Future Simple</td><td>will be + V3</td></tr></table><h3>Direct → Indirect</h3><div class="example">He said, "I am tired." → He said that he <b>was</b> tired.</div><div class="trap">Universal truths don't shift tense.</div>`,
+    questions:[
+      {q:"Passive of 'They built the bridge.'",options:["The bridge was built by them.","The bridge is built by them.","The bridge has built.","The bridge built by them."],correct:0,explain:"Past simple passive."},
+      {q:"Passive of 'She is writing a letter.'",options:["A letter is written.","A letter is being written.","A letter was written.","A letter has written."],correct:1,explain:"Present continuous passive."},
+      {q:"Indirect: He said, 'I will come tomorrow.'",options:["He said he will come tomorrow.","He said he would come the next day.","He said he comes tomorrow.","He says he would come tomorrow."],correct:1,explain:"Will → would, tomorrow → next day."},
+      {q:"Passive of 'Someone has stolen my bag.'",options:["My bag has stolen.","My bag has been stolen.","My bag was stolen.","My bag is stolen."],correct:1,explain:"Present perfect passive."},
+      {q:"Indirect: She said, 'I am busy now.'",options:["She said she is busy now.","She said she was busy then.","She said she was busy now.","She says she was busy then."],correct:1,explain:"Am → was, now → then."}
+    ]
+  },
+  { id:6, name:"L6 · Clauses", title:"Level 6 — Clauses & Conditionals",
+    subtitle:"Advanced sentence structure.",
+    theory:`<h3>Conditionals</h3><table><tr><th>Type</th><th>If-clause</th><th>Main</th></tr><tr><td>First</td><td>present</td><td>will + V1</td></tr><tr><td>Second</td><td>past (were)</td><td>would + V1</td></tr><tr><td>Third</td><td>had + V3</td><td>would have + V3</td></tr></table><div class="example">who → people, which → things, whose → possession</div><div class="trap">Double comparatives: 'more better' ✗ → 'better' ✓</div><div class="trap">'Although…but' ✗ — use only one.</div>`,
+    questions:[
+      {q:"If I ___ rich, I would buy a car.",options:["am","was","were","will be"],correct:2,explain:"Second conditional → were."},
+      {q:"If he had worked harder, he ___ the exam.",options:["will pass","would pass","would have passed","passed"],correct:2,explain:"Third conditional."},
+      {q:"The book ___ I borrowed was interesting.",options:["who","which","whose","whom"],correct:1,explain:"Which → things."},
+      {q:"___ he was tired, he continued working.",options:["Although","But","Although but","Despite"],correct:0,explain:"Although alone."},
+      {q:"Choose the correct sentence.",options:["Walking down the road, the tree was seen.","Walking down the road, I saw the tree.","Walking down the road, it was seen by me.","The tree walking down the road was seen."],correct:1,explain:"Modifier must match doer."},
+      {q:"This is ___ option available.",options:["more better","the better","the best","most best"],correct:2,explain:"Superlative."}
+    ]
+  },
+  { id:7, name:"L7 · Error Spotting", title:"Level 7 — Error Spotting",
+    subtitle:"The hardest exam patterns.",
+    theory:`<div class="trap"><b>Redundancy:</b> "return back", "repeat again", "free gift", "discuss about" — wrong.</div><div class="trap"><b>Parallelism:</b> reading, writing, and painting ✓</div><div class="trap"><b>One of / Each of:</b> One of my friends ✓</div><div class="trap"><b>Comparatives:</b> senior/junior/superior take <em>to</em>.</div><div class="trap"><b>Subjunctive:</b> He suggested that she <em>go</em>.</div><div class="trap"><b>Correlatives:</b> not only…but also, hardly…when, no sooner…than.</div>`,
+    questions:[
+      {q:"Error: 'She returned back from Delhi yesterday.'",options:["She","returned back","from Delhi","yesterday"],correct:1,explain:"Returned back is redundant."},
+      {q:"Error: 'He is senior than me.'",options:["He is","senior","than","me"],correct:2,explain:"Use 'to': senior to me."},
+      {q:"Correct sentence?",options:["Not only he sings but also dances.","He not only sings but also dances.","He sings not only but dances also.","He sings and dances not only also."],correct:1,explain:"Not only … but also."},
+      {q:"Error: 'One of my friend is a doctor.'",options:["One of","my friend","is","a doctor"],correct:1,explain:"friends (plural)."},
+      {q:"Correct sentence?",options:["No sooner had he arrived than it rained.","No sooner he arrived when it rained.","No sooner had he arrived when it rained.","No sooner he arrived than it rained."],correct:0,explain:"No sooner had … than."},
+      {q:"Error: 'She suggested that he goes home.'",options:["She suggested","that","he goes","home"],correct:2,explain:"Subjunctive: he go."},
+      {q:"Error: 'She likes reading, writing, and to paint.'",options:["She likes","reading","writing","and to paint"],correct:3,explain:"Parallelism: painting."}
+    ]
+  }
+];
+
+/* =========================================================
+   EXAM VOCABULARY WITH HINDI — curated, exam-relevant ONLY
+   (SSC / UPSC / Banking / Railways / State PSC standard)
+   ========================================================= */
+const EXAM_VOCAB = [
+  {w:"Abate",h:"कम होना",m:"to reduce in intensity",s:["diminish","lessen","subside"],a:["increase","intensify"],lv:"advanced"},
+  {w:"Aberration",h:"विचलन",m:"deviation from the norm",s:["abnormality","deviation","anomaly"],a:["normality","regularity"],lv:"advanced"},
+  {w:"Abhor",h:"घृणा करना",m:"to hate strongly",s:["detest","loathe","despise"],a:["love","adore"],lv:"advanced"},
+  {w:"Abjure",h:"त्यागना",m:"to renounce formally",s:["renounce","forswear","repudiate"],a:["embrace","accept"],lv:"advanced"},
+  {w:"Abnegate",h:"इनकार करना",m:"to surrender or deny oneself",s:["renounce","forgo","surrender"],a:["claim","assert"],lv:"advanced"},
+  {w:"Abominable",h:"घृणित",m:"hateful, detestable",s:["loathsome","odious","repugnant"],a:["delightful","pleasant"],lv:"advanced"},
+  {w:"Abridge",h:"संक्षिप्त करना",m:"to shorten",s:["shorten","condense","abbreviate"],a:["expand","lengthen"],lv:"intermediate"},
+  {w:"Abrogate",h:"रद्द करना",m:"to abolish by authority",s:["repeal","revoke","annul"],a:["enact","establish"],lv:"advanced"},
+  {w:"Abscond",h:"फरार होना",m:"to flee secretly",s:["flee","escape","bolt"],a:["remain","stay"],lv:"advanced"},
+  {w:"Absolve",h:"मुक्त करना",m:"to free from guilt",s:["pardon","exonerate","acquit"],a:["condemn","blame"],lv:"advanced"},
+  {w:"Abstemious",h:"संयमी",m:"moderate in eating/drinking",s:["temperate","moderate","restrained"],a:["gluttonous","indulgent"],lv:"advanced"},
+  {w:"Abstruse",h:"दुर्बोध",m:"difficult to understand",s:["obscure","recondite","esoteric"],a:["simple","obvious"],lv:"advanced"},
+  {w:"Abundant",h:"प्रचुर",m:"plentiful",s:["ample","copious","plentiful"],a:["scarce","sparse"],lv:"basic"},
+  {w:"Accede",h:"सहमत होना",m:"to agree or consent",s:["agree","consent","assent"],a:["refuse","dissent"],lv:"advanced"},
+  {w:"Accentuate",h:"जोर देना",m:"to emphasize",s:["emphasize","highlight","stress"],a:["downplay","minimize"],lv:"intermediate"},
+  {w:"Acclaim",h:"प्रशंसा",m:"praise, applause",s:["praise","applause","honor"],a:["criticism","censure"],lv:"intermediate"},
+  {w:"Accolade",h:"सम्मान",m:"an award or honor",s:["honor","award","tribute"],a:["criticism","blame"],lv:"advanced"},
+  {w:"Accommodate",h:"समायोजित करना",m:"to provide space or adjust",s:["adjust","adapt","house"],a:["reject","refuse"],lv:"basic"},
+  {w:"Accord",h:"सहमति",m:"agreement or harmony",s:["agreement","harmony","concord"],a:["discord","conflict"],lv:"intermediate"},
+  {w:"Accost",h:"टोकना",m:"to approach and speak to",s:["approach","confront","address"],a:["avoid","ignore"],lv:"advanced"},
+  {w:"Accretion",h:"वृद्धि",m:"gradual growth",s:["growth","accumulation","increase"],a:["depletion","reduction"],lv:"advanced"},
+  {w:"Acerbic",h:"कटु",m:"sharp or bitter in tone",s:["caustic","sarcastic","biting"],a:["mild","sweet"],lv:"advanced"},
+  {w:"Acquiesce",h:"स्वीकार करना",m:"to accept reluctantly",s:["comply","consent","submit"],a:["resist","object"],lv:"advanced"},
+  {w:"Acrimonious",h:"कटु",m:"bitter in speech/behavior",s:["bitter","caustic","hostile"],a:["amicable","cordial"],lv:"advanced"},
+  {w:"Acumen",h:"कुशाग्रता",m:"keen insight",s:["insight","shrewdness","astuteness"],a:["ignorance","folly"],lv:"advanced"},
+  {w:"Adamant",h:"अटल",m:"unyielding",s:["firm","resolute","inflexible"],a:["flexible","yielding"],lv:"intermediate"},
+  {w:"Admonish",h:"चेतावनी देना",m:"to warn gently",s:["warn","reprove","caution"],a:["praise","commend"],lv:"intermediate"},
+  {w:"Adroit",h:"निपुण",m:"skillful",s:["skillful","deft","adept"],a:["clumsy","inept"],lv:"advanced"},
+  {w:"Adulation",h:"अतिप्रशंसा",m:"excessive praise",s:["flattery","praise","worship"],a:["criticism","scorn"],lv:"advanced"},
+  {w:"Adverse",h:"प्रतिकूल",m:"unfavorable",s:["unfavorable","hostile","detrimental"],a:["favorable","beneficial"],lv:"intermediate"},
+  {w:"Advocate",h:"समर्थन करना",m:"to support or recommend",s:["support","promote","champion"],a:["oppose","discourage"],lv:"intermediate"},
+  {w:"Aesthetic",h:"सौंदर्यपरक",m:"relating to beauty",s:["artistic","tasteful","beautiful"],a:["ugly","unaesthetic"],lv:"advanced"},
+  {w:"Affable",h:"मिलनसार",m:"friendly",s:["friendly","amiable","genial"],a:["unfriendly","aloof"],lv:"intermediate"},
+  {w:"Affinity",h:"आकर्षण",m:"natural liking",s:["attraction","liking","rapport"],a:["aversion","dislike"],lv:"advanced"},
+  {w:"Affluent",h:"धनी",m:"wealthy",s:["wealthy","rich","prosperous"],a:["poor","destitute"],lv:"intermediate"},
+  {w:"Aggravate",h:"बिगाड़ना",m:"to worsen",s:["worsen","intensify","exacerbate"],a:["alleviate","improve"],lv:"intermediate"},
+  {w:"Aggrandize",h:"बढ़ाना",m:"to increase power/wealth",s:["enhance","magnify","exalt"],a:["diminish","reduce"],lv:"advanced"},
+  {w:"Alacrity",h:"तत्परता",m:"cheerful readiness",s:["eagerness","enthusiasm","promptness"],a:["reluctance","apathy"],lv:"advanced"},
+  {w:"Alleviate",h:"कम करना",m:"to relieve",s:["ease","relieve","mitigate"],a:["aggravate","worsen"],lv:"intermediate"},
+  {w:"Aloof",h:"अलग-थलग",m:"distant, detached",s:["distant","detached","remote"],a:["friendly","close"],lv:"intermediate"},
+  {w:"Altruistic",h:"परोपकारी",m:"selfless",s:["selfless","generous","unselfish"],a:["selfish","egoistic"],lv:"advanced"},
+  {w:"Ambiguous",h:"अस्पष्ट",m:"unclear, having multiple meanings",s:["unclear","vague","equivocal"],a:["clear","unambiguous"],lv:"intermediate"},
+  {w:"Ambivalent",h:"द्वंद्वात्मक",m:"having mixed feelings",s:["uncertain","conflicted","undecided"],a:["certain","decisive"],lv:"advanced"},
+  {w:"Ameliorate",h:"सुधारना",m:"to improve",s:["improve","enhance","better"],a:["worsen","deteriorate"],lv:"advanced"},
+  {w:"Amenable",h:"सहमत होने योग्य",m:"open to suggestion",s:["receptive","open","compliant"],a:["resistant","uncooperative"],lv:"advanced"},
+  {w:"Amiable",h:"मिलनसार",m:"friendly",s:["friendly","pleasant","affable"],a:["hostile","unfriendly"],lv:"intermediate"},
+  {w:"Amicable",h:"मैत्रीपूर्ण",m:"friendly, peaceful",s:["peaceful","friendly","cordial"],a:["hostile","antagonistic"],lv:"intermediate"},
+  {w:"Amalgamate",h:"विलय करना",m:"to combine",s:["combine","merge","unite"],a:["separate","divide"],lv:"advanced"},
+  {w:"Anachronism",h:"कालदोष",m:"out of proper time",s:["misplacement","incongruity","throwback"],a:["timeliness","modernity"],lv:"advanced"},
+  {w:"Anathema",h:"शापित",m:"something detested",s:["curse","abomination","bane"],a:["blessing","delight"],lv:"advanced"},
+  {w:"Anomaly",h:"असामान्यता",m:"irregularity",s:["irregularity","aberration","deviation"],a:["norm","regularity"],lv:"advanced"},
+  {w:"Antagonize",h:"विरोध करना",m:"to provoke hostility",s:["provoke","oppose","alienate"],a:["pacify","appease"],lv:"intermediate"},
+  {w:"Antipathy",h:"विरोध",m:"strong dislike",s:["dislike","aversion","hostility"],a:["sympathy","liking"],lv:"advanced"},
+  {w:"Apathy",h:"उदासीनता",m:"lack of interest",s:["indifference","disinterest","unconcern"],a:["enthusiasm","interest"],lv:"intermediate"},
+  {w:"Aphorism",h:"सूक्ति",m:"a concise saying",s:["proverb","maxim","adage"],a:["verbose speech","rambling"],lv:"advanced"},
+  {w:"Appease",h:"शांत करना",m:"to pacify",s:["pacify","placate","soothe"],a:["provoke","aggravate"],lv:"intermediate"},
+  {w:"Apprehensive",h:"आशंकित",m:"anxious, fearful",s:["anxious","fearful","uneasy"],a:["confident","calm"],lv:"intermediate"},
+  {w:"Arbitrary",h:"मनमाना",m:"based on random choice",s:["random","capricious","unreasoned"],a:["reasoned","systematic"],lv:"intermediate"},
+  {w:"Arcane",h:"रहस्यमय",m:"mysterious, known to few",s:["mysterious","esoteric","obscure"],a:["obvious","common"],lv:"advanced"},
+  {w:"Archaic",h:"पुरातन",m:"very old, outdated",s:["ancient","obsolete","antiquated"],a:["modern","current"],lv:"intermediate"},
+  {w:"Ardent",h:"उत्साही",m:"passionate",s:["passionate","fervent","zealous"],a:["apathetic","indifferent"],lv:"intermediate"},
+  {w:"Arduous",h:"कठिन",m:"difficult, strenuous",s:["difficult","strenuous","laborious"],a:["easy","effortless"],lv:"intermediate"},
+  {w:"Articulate",h:"स्पष्ट वक्ता",m:"able to express clearly",s:["eloquent","expressive","fluent"],a:["inarticulate","mute"],lv:"intermediate"},
+  {w:"Ascetic",h:"तपस्वी",m:"self-disciplined, austere",s:["austere","abstinent","spartan"],a:["indulgent","luxurious"],lv:"advanced"},
+  {w:"Assiduous",h:"परिश्रमी",m:"diligent",s:["diligent","industrious","persistent"],a:["lazy","negligent"],lv:"advanced"},
+  {w:"Astute",h:"चतुर",m:"shrewd, clever",s:["shrewd","clever","perceptive"],a:["naive","foolish"],lv:"advanced"},
+  {w:"Attenuate",h:"कमजोर करना",m:"to weaken",s:["weaken","reduce","thin"],a:["strengthen","amplify"],lv:"advanced"},
+  {w:"Audacious",h:"साहसी",m:"bold, daring",s:["bold","daring","brazen"],a:["timid","cautious"],lv:"advanced"},
+  {w:"Augment",h:"बढ़ाना",m:"to increase",s:["increase","enlarge","boost"],a:["decrease","diminish"],lv:"intermediate"},
+  {w:"Auspicious",h:"शुभ",m:"favorable, promising",s:["favorable","promising","propitious"],a:["inauspicious","unlucky"],lv:"advanced"},
+  {w:"Austere",h:"कठोर, सादा",m:"severe, plain",s:["severe","plain","stern"],a:["ornate","luxurious"],lv:"advanced"},
+  {w:"Authentic",h:"प्रामाणिक",m:"genuine",s:["genuine","real","legitimate"],a:["fake","spurious"],lv:"basic"},
+  {w:"Avarice",h:"लोभ",m:"greed",s:["greed","cupidity","covetousness"],a:["generosity","charity"],lv:"advanced"},
+  {w:"Averse",h:"विरोधी",m:"opposed, unwilling",s:["opposed","reluctant","disinclined"],a:["willing","eager"],lv:"intermediate"},
+  {w:"Benevolent",h:"परोपकारी",m:"kind, generous",s:["kind","generous","charitable"],a:["malevolent","cruel"],lv:"intermediate"},
+  {w:"Bewilder",h:"भ्रमित करना",m:"to confuse",s:["confuse","perplex","baffle"],a:["clarify","enlighten"],lv:"intermediate"},
+  {w:"Bias",h:"पूर्वाग्रह",m:"prejudice",s:["prejudice","partiality","inclination"],a:["fairness","impartiality"],lv:"intermediate"},
+  {w:"Bolster",h:"मजबूत करना",m:"to support",s:["support","strengthen","reinforce"],a:["weaken","undermine"],lv:"intermediate"},
+  {w:"Bombastic",h:"आडंबरपूर्ण",m:"pompous in speech",s:["pompous","grandiloquent","pretentious"],a:["simple","plain"],lv:"advanced"},
+  {w:"Brevity",h:"संक्षिप्तता",m:"shortness",s:["shortness","conciseness","briefness"],a:["verbosity","length"],lv:"advanced"},
+  {w:"Cajole",h:"फुसलाना",m:"to persuade",s:["persuade","coax","wheedle"],a:["force","compel"],lv:"advanced"},
+  {w:"Callous",h:"निर्दयी",m:"unfeeling",s:["unfeeling","heartless","insensitive"],a:["compassionate","kind"],lv:"advanced"},
+  {w:"Candid",h:"स्पष्टवादी",m:"honest, frank",s:["honest","frank","open"],a:["deceitful","evasive"],lv:"intermediate"},
+  {w:"Capricious",h:"मनमौजी",m:"unpredictable",s:["unpredictable","fickle","whimsical"],a:["steady","constant"],lv:"advanced"},
+  {w:"Castigate",h:"कड़ी निंदा करना",m:"to criticize severely",s:["rebuke","reprimand","censure"],a:["praise","commend"],lv:"advanced"},
+  {w:"Catalyst",h:"उत्प्रेरक",m:"something that causes change",s:["stimulus","trigger","impetus"],a:["inhibitor","obstacle"],lv:"intermediate"},
+  {w:"Caustic",h:"कटु",m:"biting, sarcastic",s:["sarcastic","biting","mordant"],a:["mild","soothing"],lv:"advanced"},
+  {w:"Censure",h:"निंदा करना",m:"to criticize formally",s:["condemn","reprimand","rebuke"],a:["praise","approve"],lv:"advanced"},
+  {w:"Chicanery",h:"धोखाधड़ी",m:"trickery",s:["trickery","deception","fraud"],a:["honesty","integrity"],lv:"advanced"},
+  {w:"Circumspect",h:"सतर्क",m:"cautious",s:["cautious","prudent","wary"],a:["reckless","careless"],lv:"advanced"},
+  {w:"Clandestine",h:"गुप्त",m:"secret",s:["secret","covert","surreptitious"],a:["open","overt"],lv:"advanced"},
+  {w:"Coalesce",h:"मिल जाना",m:"to combine",s:["combine","merge","unite"],a:["separate","divide"],lv:"advanced"},
+  {w:"Coerce",h:"जबरदस्ती करना",m:"to force",s:["force","compel","pressurize"],a:["persuade","allow"],lv:"intermediate"},
+  {w:"Cognizant",h:"अवगत",m:"aware",s:["aware","conscious","mindful"],a:["unaware","ignorant"],lv:"advanced"},
+  {w:"Commendable",h:"प्रशंसनीय",m:"praiseworthy",s:["praiseworthy","admirable","laudable"],a:["blameworthy","reprehensible"],lv:"intermediate"},
+  {w:"Compassion",h:"करुणा",m:"sympathy",s:["sympathy","empathy","kindness"],a:["indifference","cruelty"],lv:"basic"},
+  {w:"Complacent",h:"आत्मसंतुष्ट",m:"self-satisfied",s:["self-satisfied","smug","unconcerned"],a:["dissatisfied","alert"],lv:"advanced"},
+  {w:"Compromise",h:"समझौता",m:"settlement of differences",s:["settlement","concession","accommodation"],a:["conflict","dispute"],lv:"basic"},
+  {w:"Concur",h:"सहमत होना",m:"to agree",s:["agree","accord","coincide"],a:["disagree","differ"],lv:"intermediate"},
+  {w:"Condone",h:"क्षमा करना",m:"to overlook or forgive",s:["overlook","forgive","excuse"],a:["condemn","punish"],lv:"advanced"},
+  {w:"Conducive",h:"सहायक",m:"helpful, favorable",s:["helpful","favorable","beneficial"],a:["hindering","adverse"],lv:"advanced"},
+  {w:"Confluence",h:"संगम",m:"a coming together",s:["junction","meeting","convergence"],a:["divergence","separation"],lv:"advanced"},
+  {w:"Congenial",h:"सुखद",m:"pleasant, agreeable",s:["pleasant","agreeable","friendly"],a:["unpleasant","hostile"],lv:"intermediate"},
+  {w:"Conjecture",h:"अनुमान",m:"guess",s:["guess","speculation","surmise"],a:["fact","certainty"],lv:"intermediate"},
+  {w:"Conscientious",h:"कर्तव्यनिष्ठ",m:"careful, diligent",s:["careful","diligent","scrupulous"],a:["careless","negligent"],lv:"intermediate"},
+  {w:"Consolidate",h:"मजबूत करना",m:"to strengthen or combine",s:["strengthen","merge","unify"],a:["weaken","divide"],lv:"intermediate"},
+  {w:"Conspicuous",h:"स्पष्ट",m:"noticeable",s:["noticeable","obvious","prominent"],a:["inconspicuous","hidden"],lv:"intermediate"},
+  {w:"Contemplate",h:"विचार करना",m:"to think about",s:["consider","ponder","reflect"],a:["ignore","dismiss"],lv:"intermediate"},
+  {w:"Contempt",h:"तिरस्कार",m:"scorn",s:["scorn","disdain","derision"],a:["respect","admiration"],lv:"intermediate"},
+  {w:"Contrite",h:"पश्चात्तापी",m:"remorseful",s:["remorseful","penitent","sorry"],a:["unrepentant","defiant"],lv:"advanced"},
+  {w:"Conundrum",h:"पहेली",m:"difficult problem",s:["puzzle","riddle","problem"],a:["solution","answer"],lv:"advanced"},
+  {w:"Copious",h:"विपुल",m:"abundant",s:["abundant","plentiful","ample"],a:["scarce","meager"],lv:"intermediate"},
+  {w:"Cordial",h:"सौहार्दपूर्ण",m:"friendly",s:["friendly","warm","genial"],a:["hostile","cold"],lv:"intermediate"},
+  {w:"Corroborate",h:"पुष्टि करना",m:"to confirm",s:["confirm","verify","validate"],a:["contradict","refute"],lv:"advanced"},
+  {w:"Credulous",h:"भोला",m:"gullible",s:["gullible","naive","trusting"],a:["skeptical","suspicious"],lv:"advanced"},
+  {w:"Culpable",h:"दोषी",m:"guilty",s:["guilty","blameworthy","responsible"],a:["innocent","blameless"],lv:"advanced"},
+  {w:"Curtail",h:"कम करना",m:"to reduce",s:["reduce","cut","abridge"],a:["extend","expand"],lv:"intermediate"},
+  {w:"Cynical",h:"संदेहवादी",m:"distrustful",s:["distrustful","skeptical","pessimistic"],a:["trusting","optimistic"],lv:"intermediate"},
+  {w:"Dearth",h:"कमी",m:"scarcity",s:["scarcity","shortage","lack"],a:["abundance","plenty"],lv:"advanced"},
+  {w:"Debilitate",h:"कमजोर करना",m:"to weaken",s:["weaken","enfeeble","undermine"],a:["strengthen","invigorate"],lv:"advanced"},
+  {w:"Decorun",h:"शिष्टाचार",m:"proper behavior",s:["propriety","etiquette","dignity"],a:["impropriety","rudeness"],lv:"advanced"},
+  {w:"Deference",h:"सम्मान",m:"respect",s:["respect","regard","esteem"],a:["disrespect","insolence"],lv:"advanced"},
+  {w:"Defunct",h:"अप्रचलित",m:"no longer existing",s:["extinct","obsolete","dead"],a:["active","living"],lv:"advanced"},
+  {w:"Deleterious",h:"हानिकारक",m:"harmful",s:["harmful","injurious","detrimental"],a:["beneficial","harmless"],lv:"advanced"},
+  {w:"Delineate",h:"वर्णन करना",m:"to describe precisely",s:["describe","outline","depict"],a:["confuse","obscure"],lv:"advanced"},
+  {w:"Deluge",h:"बाढ़",m:"a flood",s:["flood","inundation","torrent"],a:["drought","trickle"],lv:"intermediate"},
+  {w:"Demeanor",h:"आचरण",m:"behavior, conduct",s:["behavior","conduct","manner"],a:["misbehavior","impropriety"],lv:"advanced"},
+  {w:"Demystify",h:"स्पष्ट करना",m:"to make clear",s:["clarify","explain","simplify"],a:["obscure","confuse"],lv:"intermediate"},
+  {w:"Denigrate",h:"बदनाम करना",m:"to disparage",s:["disparage","belittle","defame"],a:["praise","exalt"],lv:"advanced"},
+  {w:"Denounce",h:"निंदा करना",m:"to condemn publicly",s:["condemn","criticize","accuse"],a:["praise","commend"],lv:"intermediate"},
+  {w:"Deplete",h:"समाप्त करना",m:"to use up",s:["exhaust","drain","consume"],a:["replenish","fill"],lv:"intermediate"},
+  {w:"Deprecate",h:"अस्वीकृति देना",m:"to express disapproval",s:["disapprove","deplore","disparage"],a:["approve","endorse"],lv:"advanced"},
+  {w:"Deride",h:"उपहास करना",m:"to mock",s:["mock","ridicule","scorn"],a:["respect","praise"],lv:"advanced"},
+  {w:"Derogatory",h:"अपमानजनक",m:"belittling",s:["belittling","disparaging","insulting"],a:["complimentary","flattering"],lv:"advanced"},
+  {w:"Despondent",h:"निराश",m:"depressed",s:["depressed","hopeless","dejected"],a:["hopeful","cheerful"],lv:"advanced"},
+  {w:"Destitute",h:"निर्धन",m:"extremely poor",s:["impoverished","penniless","indigent"],a:["wealthy","affluent"],lv:"advanced"},
+  {w:"Deter",h:"रोकना",m:"to discourage",s:["discourage","prevent","dissuade"],a:["encourage","motivate"],lv:"intermediate"},
+  {w:"Detrimental",h:"हानिकारक",m:"harmful",s:["harmful","damaging","injurious"],a:["beneficial","helpful"],lv:"intermediate"},
+  {w:"Devious",h:"कपटी",m:"cunning, deceitful",s:["cunning","deceitful","sly"],a:["honest","straightforward"],lv:"advanced"},
+  {w:"Didactic",h:"शिक्षाप्रद",m:"instructive",s:["instructive","educational","moralizing"],a:["uninformative","entertaining"],lv:"advanced"},
+  {w:"Diffident",h:"संकोची",m:"shy, lacking confidence",s:["shy","timid","bashful"],a:["confident","assertive"],lv:"advanced"},
+  {w:"Digress",h:"विषय से भटकना",m:"to stray from topic",s:["deviate","stray","diverge"],a:["focus","concentrate"],lv:"advanced"},
+  {w:"Dilatory",h:"विलंबकारी",m:"slow, delaying",s:["slow","delaying","procrastinating"],a:["prompt","punctual"],lv:"advanced"},
+  {w:"Diligent",h:"मेहनती",m:"hardworking",s:["hardworking","industrious","assiduous"],a:["lazy","negligent"],lv:"intermediate"},
+  {w:"Diminish",h:"कम करना",m:"to reduce",s:["reduce","decrease","lessen"],a:["increase","augment"],lv:"basic"},
+  {w:"Discern",h:"पहचानना",m:"to perceive",s:["perceive","detect","distinguish"],a:["overlook","miss"],lv:"intermediate"},
+  {w:"Discrepancy",h:"असंगति",m:"inconsistency",s:["inconsistency","difference","disparity"],a:["consistency","agreement"],lv:"advanced"},
+  {w:"Disdain",h:"तिरस्कार",m:"scorn",s:["scorn","contempt","derision"],a:["respect","admiration"],lv:"advanced"},
+  {w:"Disparage",h:"नीचा दिखाना",m:"to belittle",s:["belittle","depreciate","undervalue"],a:["praise","extol"],lv:"advanced"},
+  {w:"Disparate",h:"भिन्न",m:"fundamentally different",s:["different","dissimilar","distinct"],a:["similar","alike"],lv:"advanced"},
+  {w:"Disseminate",h:"फैलाना",m:"to spread",s:["spread","circulate","distribute"],a:["suppress","conceal"],lv:"advanced"},
+  {w:"Dissent",h:"मतभेद",m:"disagreement",s:["disagreement","opposition","objection"],a:["agreement","consent"],lv:"intermediate"},
+  {w:"Dissuade",h:"रोकना",m:"to discourage",s:["discourage","deter","persuade against"],a:["persuade","encourage"],lv:"intermediate"},
+  {w:"Divergent",h:"भिन्न",m:"different, separating",s:["different","diverging","separate"],a:["convergent","similar"],lv:"intermediate"},
+  {w:"Docile",h:"आज्ञाकारी",m:"obedient",s:["obedient","submissive","compliant"],a:["rebellious","defiant"],lv:"intermediate"},
+  {w:"Dogmatic",h:"कट्टर",m:"opinionated",s:["opinionated","assertive","rigid"],a:["open-minded","flexible"],lv:"advanced"},
+  {w:"Dubious",h:"संदिग्ध",m:"doubtful",s:["doubtful","suspicious","questionable"],a:["certain","trustworthy"],lv:"intermediate"},
+  {w:"Duplicity",h:"द्वैधता",m:"deceitfulness",s:["deceit","deception","dishonesty"],a:["honesty","sincerity"],lv:"advanced"},
+  {w:"Ebullient",h:"उत्साही",m:"enthusiastic",s:["enthusiastic","exuberant","vivacious"],a:["gloomy","depressed"],lv:"advanced"},
+  {w:"Eclectic",h:"विविध",m:"varied, from many sources",s:["varied","diverse","wide-ranging"],a:["narrow","uniform"],lv:"advanced"},
+  {w:"Efficacy",h:"प्रभावशीलता",m:"effectiveness",s:["effectiveness","efficiency","potency"],a:["ineffectiveness","futility"],lv:"advanced"},
+  {w:"Effusive",h:"अतिभावुक",m:"expressing emotion openly",s:["gushing","demonstrative","enthusiastic"],a:["reserved","restrained"],lv:"advanced"},
+  {w:"Egregious",h:"घोर",m:"outstandingly bad",s:["flagrant","glaring","shocking"],a:["minor","slight"],lv:"advanced"},
+  {w:"Elated",h:"प्रफुल्लित",m:"very happy",s:["overjoyed","jubilant","ecstatic"],a:["depressed","sad"],lv:"intermediate"},
+  {w:"Elicit",h:"निकालना",m:"to draw out",s:["extract","evoke","draw out"],a:["suppress","repress"],lv:"advanced"},
+  {w:"Eloquent",h:"वाक्पटु",m:"fluent, persuasive",s:["fluent","persuasive","expressive"],a:["inarticulate","halting"],lv:"intermediate"},
+  {w:"Elucidate",h:"स्पष्ट करना",m:"to explain",s:["clarify","explain","illuminate"],a:["confuse","obscure"],lv:"advanced"},
+  {w:"Elusive",h:"मुश्किल से पकड़ा जाने वाला",m:"hard to catch",s:["evasive","slippery","fleeting"],a:["accessible","capturable"],lv:"advanced"},
+  {w:"Emaciated",h:"दुबला-पतला",m:"abnormally thin",s:["thin","gaunt","skeletal"],a:["plump","fat"],lv:"advanced"},
+  {w:"Embellish",h:"सजाना",m:"to decorate or exaggerate",s:["decorate","adorn","exaggerate"],a:["simplify","strip"],lv:"intermediate"},
+  {w:"Eminent",h:"प्रतिष्ठित",m:"distinguished",s:["distinguished","famous","renowned"],a:["unknown","obscure"],lv:"intermediate"},
+  {w:"Empirical",h:"अनुभवजन्य",m:"based on observation",s:["observed","experimental","practical"],a:["theoretical","speculative"],lv:"advanced"},
+  {w:"Emulate",h:"अनुकरण करना",m:"to imitate",s:["imitate","mimic","copy"],a:["originate","invent"],lv:"intermediate"},
+  {w:"Enervate",h:"कमजोर करना",m:"to weaken",s:["weaken","exhaust","debilitate"],a:["energize","strengthen"],lv:"advanced"},
+  {w:"Engender",h:"उत्पन्न करना",m:"to cause",s:["cause","produce","generate"],a:["prevent","suppress"],lv:"advanced"},
+  {w:"Enhance",h:"बढ़ाना",m:"to improve",s:["improve","augment","boost"],a:["diminish","reduce"],lv:"basic"},
+  {w:"Enigma",h:"रहस्य",m:"mystery",s:["mystery","puzzle","riddle"],a:["clarity","solution"],lv:"intermediate"},
+  {w:"Enmity",h:"शत्रुता",m:"hostility",s:["hostility","animosity","hatred"],a:["friendship","amity"],lv:"advanced"},
+  {w:"Ennui",h:"ऊब",m:"boredom",s:["boredom","listlessness","tedium"],a:["excitement","interest"],lv:"advanced"},
+  {w:"Ephemeral",h:"क्षणभंगुर",m:"short-lived",s:["short-lived","transient","fleeting"],a:["permanent","lasting"],lv:"advanced"},
+  {w:"Epitome",h:"सारांश",m:"perfect example",s:["embodiment","quintessence","model"],a:["antithesis","opposite"],lv:"advanced"},
+  {w:"Equanimity",h:"समता",m:"calmness",s:["calmness","composure","serenity"],a:["agitation","anxiety"],lv:"advanced"},
+  {w:"Equivocal",h:"द्वयर्थक",m:"ambiguous",s:["ambiguous","vague","uncertain"],a:["clear","definite"],lv:"advanced"},
+  {w:"Eradicate",h:"उन्मूलन करना",m:"to eliminate",s:["eliminate","destroy","exterminate"],a:["establish","create"],lv:"intermediate"},
+  {w:"Erratic",h:"अनियमित",m:"unpredictable",s:["unpredictable","irregular","inconsistent"],a:["steady","consistent"],lv:"intermediate"},
+  {w:"Erudite",h:"विद्वान",m:"scholarly",s:["scholarly","learned","knowledgeable"],a:["ignorant","uneducated"],lv:"advanced"},
+  {w:"Esoteric",h:"गूढ़",m:"known to few",s:["obscure","arcane","cryptic"],a:["common","well-known"],lv:"advanced"},
+  {w:"Eulogy",h:"प्रशंसा भाषण",m:"speech of praise",s:["tribute","praise","panegyric"],a:["criticism","condemnation"],lv:"advanced"},
+  {w:"Euphoria",h:"परम आनंद",m:"extreme happiness",s:["elation","rapture","bliss"],a:["depression","despair"],lv:"advanced"},
+  {w:"Evanescent",h:"क्षणिक",m:"fading quickly",s:["fleeting","transient","ephemeral"],a:["permanent","enduring"],lv:"advanced"},
+  {w:"Evasive",h:"टालमटोल करने वाला",m:"avoiding",s:["avoiding","elusive","dodging"],a:["direct","frank"],lv:"intermediate"},
+  {w:"Exacerbate",h:"बिगाड़ना",m:"to worsen",s:["worsen","aggravate","intensify"],a:["alleviate","improve"],lv:"advanced"},
+  {w:"Exculpate",h:"दोषमुक्त करना",m:"to clear of blame",s:["exonerate","acquit","absolve"],a:["convict","blame"],lv:"advanced"},
+  {w:"Exemplary",h:"अनुकरणीय",m:"worthy of imitation",s:["model","admirable","commendable"],a:["inferior","reprehensible"],lv:"intermediate"},
+  {w:"Exhaustive",h:"विस्तृत",m:"thorough",s:["thorough","comprehensive","complete"],a:["incomplete","superficial"],lv:"intermediate"},
+  {w:"Exonerate",h:"दोषमुक्त करना",m:"to clear of blame",s:["acquit","absolve","exculpate"],a:["convict","blame"],lv:"advanced"},
+  {w:"Exorbitant",h:"अत्यधिक",m:"excessive",s:["excessive","extravagant","inflated"],a:["reasonable","moderate"],lv:"intermediate"},
+  {w:"Expedient",h:"समीचीन",m:"practical, advantageous",s:["practical","advantageous","prudent"],a:["impractical","inexpedient"],lv:"advanced"},
+  {w:"Explicit",h:"स्पष्ट",m:"clear, direct",s:["clear","direct","unambiguous"],a:["implicit","vague"],lv:"intermediate"},
+  {w:"Extol",h:"प्रशंसा करना",m:"to praise",s:["praise","laud","glorify"],a:["criticize","condemn"],lv:"advanced"},
+  {w:"Extraneous",h:"अप्रासंगिक",m:"irrelevant",s:["irrelevant","unnecessary","external"],a:["relevant","essential"],lv:"advanced"},
+  {w:"Extravagant",h:"फिजूलखर्च",m:"excessive, wasteful",s:["wasteful","lavish","excessive"],a:["frugal","thrifty"],lv:"intermediate"},
+  {w:"Exuberant",h:"उत्साही",m:"lively, enthusiastic",s:["lively","enthusiastic","vivacious"],a:["gloomy","subdued"],lv:"intermediate"},
+  {w:"Facetious",h:"हास्यास्पद",m:"joking inappropriately",s:["flippant","frivolous","joking"],a:["serious","solemn"],lv:"advanced"},
+  {w:"Fallacious",h:"भ्रामक",m:"false, misleading",s:["false","misleading","erroneous"],a:["valid","sound"],lv:"advanced"},
+  {w:"Fastidious",h:"नकचढ़ा",m:"very particular",s:["particular","meticulous","fussy"],a:["careless","easygoing"],lv:"advanced"},
+  {w:"Fatuous",h:"मूर्खतापूर्ण",m:"silly, foolish",s:["silly","foolish","inane"],a:["wise","sensible"],lv:"advanced"},
+  {w:"Feasible",h:"व्यवहार्य",m:"possible",s:["possible","practicable","workable"],a:["impossible","impractical"],lv:"intermediate"},
+  {w:"Felicitous",h:"उपयुक्त",m:"apt, well-chosen",s:["apt","appropriate","fitting"],a:["inappropriate","clumsy"],lv:"advanced"},
+  {w:"Fervent",h:"उत्साही",m:"passionate",s:["passionate","ardent","zealous"],a:["apathetic","indifferent"],lv:"advanced"},
+  {w:"Fickle",h:"चंचल",m:"changeable",s:["changeable","inconstant","volatile"],a:["constant","steadfast"],lv:"intermediate"},
+  {w:"Flagrant",h:"घोर",m:"obviously offensive",s:["blatant","glaring","egregious"],a:["subtle","minor"],lv:"advanced"},
+  {w:"Flamboyant",h:"भड़कीला",m:"showy",s:["showy","ornate","extravagant"],a:["modest","plain"],lv:"intermediate"},
+  {w:"Flippant",h:"खुशमिजाज",m:"disrespectfully casual",s:["disrespectful","frivolous","pert"],a:["respectful","serious"],lv:"advanced"},
+  {w:"Fluctuate",h:"उतार-चढ़ाव होना",m:"to vary",s:["vary","waver","oscillate"],a:["stabilize","steady"],lv:"intermediate"},
+  {w:"Foment",h:"भड़काना",m:"to stir up",s:["incite","provoke","instigate"],a:["calm","pacify"],lv:"advanced"},
+  {w:"Forbearance",h:"सहनशीलता",m:"patience",s:["patience","restraint","tolerance"],a:["impatience","intolerance"],lv:"advanced"},
+  {w:"Fortuitous",h:"आकस्मिक",m:"happening by chance",s:["accidental","chance","lucky"],a:["intentional","planned"],lv:"advanced"},
+  {w:"Foster",h:"बढ़ावा देना",m:"to encourage",s:["encourage","nurture","promote"],a:["suppress","discourage"],lv:"intermediate"},
+  {w:"Fraudulent",h:"धोखाधड़ीपूर्ण",m:"deceptive",s:["deceptive","dishonest","fake"],a:["honest","genuine"],lv:"intermediate"},
+  {w:"Frugal",h:"कंजूस",m:"thrifty",s:["thrifty","economical","sparing"],a:["extravagant","wasteful"],lv:"intermediate"},
+  {w:"Futile",h:"व्यर्थ",m:"useless",s:["useless","fruitless","vain"],a:["useful","effective"],lv:"intermediate"},
+  {w:"Garrulous",h:"बातूनी",m:"talkative",s:["talkative","loquacious","chatty"],a:["taciturn","silent"],lv:"advanced"},
+  {w:"Germane",h:"प्रासंगिक",m:"relevant",s:["relevant","pertinent","applicable"],a:["irrelevant","unrelated"],lv:"advanced"},
+  {w:"Glut",h:"अधिकता",m:"excess supply",s:["surplus","excess","oversupply"],a:["shortage","dearth"],lv:"intermediate"},
+  {w:"Gratuitous",h:"अकारण",m:"unnecessary",s:["unnecessary","unwarranted","unjustified"],a:["necessary","justified"],lv:"advanced"},
+  {w:"Gregarious",h:"मिलनसार",m:"sociable",s:["sociable","outgoing","social"],a:["solitary","antisocial"],lv:"intermediate"},
+  {w:"Grievous",h:"गंभीर",m:"severe, serious",s:["severe","serious","grave"],a:["minor","trivial"],lv:"intermediate"},
+  {w:"Guile",h:"चालाकी",m:"cunning",s:["cunning","deceit","craft"],a:["honesty","sincerity"],lv:"advanced"},
+  {w:"Hackneyed",h:"घिसा-पिटा",m:"overused",s:["overused","clichéd","trite"],a:["original","fresh"],lv:"advanced"},
+  {w:"Haphazard",h:"बेतरतीब",m:"random",s:["random","disorganized","chaotic"],a:["systematic","organized"],lv:"intermediate"},
+  {w:"Harbinger",h:"अग्रदूत",m:"a sign of things to come",s:["omen","forerunner","precursor"],a:["result","aftermath"],lv:"advanced"},
+  {w:"Haughty",h:"अभिमानी",m:"arrogant",s:["arrogant","proud","disdainful"],a:["humble","modest"],lv:"advanced"},
+  {w:"Hedonistic",h:"सुखवादी",m:"pleasure-seeking",s:["pleasure-seeking","indulgent","sensual"],a:["ascetic","self-denying"],lv:"advanced"},
+  {w:"Hegemony",h:"प्रभुत्व",m:"dominance",s:["dominance","supremacy","control"],a:["subordination","weakness"],lv:"advanced"},
+  {w:"Heresy",h:"पाषंड",m:"unorthodox belief",s:["unorthodoxy","dissent","heterodoxy"],a:["orthodoxy","conformity"],lv:"advanced"},
+  {w:"Homogeneous",h:"समरूप",m:"uniform",s:["uniform","similar","consistent"],a:["heterogeneous","diverse"],lv:"intermediate"},
+  {w:"Hyperbole",h:"अतिशयोक्ति",m:"exaggeration",s:["exaggeration","overstatement","embellishment"],a:["understatement","literalness"],lv:"advanced"},
+  {w:"Iconoclast",h:"प्रतिमा-भंजक",m:"one who attacks tradition",s:["rebel","dissenter","nonconformist"],a:["traditionalist","conformist"],lv:"advanced"},
+  {w:"Idiosyncrasy",h:"विशिष्टता",m:"peculiar habit",s:["quirk","peculiarity","eccentricity"],a:["conformity","normality"],lv:"advanced"},
+  {w:"Ignominious",h:"अपमानजनक",m:"shameful",s:["shameful","disgraceful","humiliating"],a:["honorable","respectable"],lv:"advanced"},
+  {w:"Illustrious",h:"प्रसिद्ध",m:"famous, respected",s:["famous","renowned","distinguished"],a:["unknown","obscure"],lv:"intermediate"},
+  {w:"Immutable",h:"अपरिवर्तनीय",m:"unchangeable",s:["unchangeable","fixed","permanent"],a:["changeable","mutable"],lv:"advanced"},
+  {w:"Impartial",h:"निष्पक्ष",m:"fair, unbiased",s:["fair","unbiased","neutral"],a:["biased","partial"],lv:"intermediate"},
+  {w:"Impeccable",h:"निर्दोष",m:"flawless",s:["flawless","perfect","faultless"],a:["flawed","imperfect"],lv:"intermediate"},
+  {w:"Impede",h:"बाधा डालना",m:"to hinder",s:["hinder","obstruct","block"],a:["facilitate","assist"],lv:"intermediate"},
+  {w:"Imperative",h:"अनिवार्य",m:"essential",s:["essential","crucial","vital"],a:["optional","unnecessary"],lv:"intermediate"},
+  {w:"Impertinent",h:"अभद्र",m:"rude",s:["rude","insolent","disrespectful"],a:["polite","respectful"],lv:"advanced"},
+  {w:"Impervious",h:"अभेद्य",m:"unable to be affected",s:["impenetrable","unaffected","resistant"],a:["permeable","susceptible"],lv:"advanced"},
+  {w:"Impetuous",h:"उतावला",m:"rash",s:["rash","impulsive","hasty"],a:["cautious","deliberate"],lv:"advanced"},
+  {w:"Implacable",h:"अप्रसन्न करने योग्य",m:"unable to be appeased",s:["relentless","unforgiving","inexorable"],a:["forgiving","placable"],lv:"advanced"},
+  {w:"Implicit",h:"निहित",m:"implied",s:["implied","unspoken","inherent"],a:["explicit","stated"],lv:"advanced"},
+  {w:"Impoverish",h:"गरीब बनाना",m:"to make poor",s:["impoverish","beggar","deplete"],a:["enrich","fortify"],lv:"intermediate"},
+  {w:"Impromptu",h:"बिना तैयारी का",m:"without preparation",s:["spontaneous","improvised","unrehearsed"],a:["planned","prepared"],lv:"intermediate"},
+  {w:"Improvident",h:"अविवेकी",m:"not thrifty",s:["wasteful","careless","thriftless"],a:["provident","thrifty"],lv:"advanced"},
+  {w:"Impudent",h:"दृष्ट",m:"insolent",s:["insolent","disrespectful","impertinent"],a:["polite","respectful"],lv:"advanced"},
+  {w:"Inadvertent",h:"अनजाने",m:"unintentional",s:["unintentional","accidental","unplanned"],a:["intentional","deliberate"],lv:"advanced"},
+  {w:"Inane",h:"मूर्खतापूर्ण",m:"silly",s:["silly","foolish","vacuous"],a:["sensible","profound"],lv:"advanced"},
+  {w:"Incessant",h:"निरंतर",m:"continuous",s:["continuous","constant","unceasing"],a:["intermittent","occasional"],lv:"intermediate"},
+  {w:"Incisive",h:"तीक्ष्ण",m:"sharp, penetrating",s:["sharp","penetrating","acute"],a:["dull","vague"],lv:"advanced"},
+  {w:"Incongruous",h:"असंगत",m:"out of place",s:["inappropriate","mismatched","discordant"],a:["appropriate","harmonious"],lv:"advanced"},
+  {w:"Inconsequential",h:"तुच्छ",m:"insignificant",s:["insignificant","trivial","minor"],a:["significant","important"],lv:"intermediate"},
+  {w:"Incontrovertible",h:"अखंडनीय",m:"undeniable",s:["undeniable","indisputable","certain"],a:["disputable","questionable"],lv:"advanced"},
+  {w:"Indefatigable",h:"अथक",m:"tireless",s:["tireless","persistent","untiring"],a:["tired","weary"],lv:"advanced"},
+  {w:"Indifferent",h:"उदासीन",m:"uninterested",s:["uninterested","apathetic","unconcerned"],a:["interested","caring"],lv:"intermediate"},
+  {w:"Indigenous",h:"स्वदेशी",m:"native",s:["native","original","aboriginal"],a:["foreign","non-native"],lv:"intermediate"},
+  {w:"Indigent",h:"निर्धन",m:"poor",s:["poor","destitute","impoverished"],a:["wealthy","rich"],lv:"advanced"},
+  {w:"Indolent",h:"आलसी",m:"lazy",s:["lazy","idle","slothful"],a:["diligent","industrious"],lv:"advanced"},
+  {w:"Indomitable",h:"अजेय",m:"unconquerable",s:["unconquerable","invincible","unyielding"],a:["conquerable","weak"],lv:"advanced"},
+  {w:"Ineffable",h:"अवर्णनीय",m:"too great to describe",s:["indescribable","inexpressible","unspeakable"],a:["expressible","describable"],lv:"advanced"},
+  {w:"Ineluctable",h:"अनिवार्य",m:"unavoidable",s:["unavoidable","inescapable","inevitable"],a:["avoidable","escapable"],lv:"advanced"},
+  {w:"Inept",h:"अयोग्य",m:"incompetent",s:["incompetent","clumsy","unskilled"],a:["competent","skillful"],lv:"intermediate"},
+  {w:"Inert",h:"निष्क्रिय",m:"inactive",s:["inactive","lifeless","sluggish"],a:["active","energetic"],lv:"advanced"},
+  {w:"Inexorable",h:"अटल",m:"relentless",s:["relentless","unyielding","implacable"],a:["flexible","yielding"],lv:"advanced"},
+  {w:"Ingenious",h:"प्रतिभाशाली",m:"clever",s:["clever","inventive","resourceful"],a:["unimaginative","dull"],lv:"intermediate"},
+  {w:"Ingenuous",h:"भोला",m:"innocent, naive",s:["naive","innocent","artless"],a:["cunning","worldly"],lv:"advanced"},
+  {w:"Inherent",h:"अंतर्निहित",m:"innate",s:["innate","intrinsic","built-in"],a:["acquired","extrinsic"],lv:"intermediate"},
+  {w:"Inimical",h:"शत्रुतापूर्ण",m:"hostile",s:["hostile","harmful","adverse"],a:["friendly","beneficial"],lv:"advanced"},
+  {w:"Innocuous",h:"हानिरहित",m:"harmless",s:["harmless","inoffensive","safe"],a:["harmful","dangerous"],lv:"advanced"},
+  {w:"Innovative",h:"नवीन",m:"creative",s:["creative","original","novel"],a:["traditional","conventional"],lv:"intermediate"},
+  {w:"Inordinate",h:"अत्यधिक",m:"excessive",s:["excessive","immoderate","unreasonable"],a:["moderate","reasonable"],lv:"advanced"},
+  {w:"Insidious",h:"कपटी",m:"subtly harmful",s:["stealthy","treacherous","sly"],a:["open","harmless"],lv:"advanced"},
+  {w:"Insinuate",h:"संकेत करना",m:"to hint",s:["hint","imply","suggest"],a:["state","declare"],lv:"advanced"},
+  {w:"Insipid",h:"फीका",m:"dull, tasteless",s:["dull","bland","tasteless"],a:["interesting","flavorful"],lv:"advanced"},
+  {w:"Insolent",h:"अभद्र",m:"rude",s:["rude","impudent","disrespectful"],a:["polite","respectful"],lv:"advanced"},
+  {w:"Instigate",h:"भड़काना",m:"to provoke",s:["provoke","incite","spur"],a:["deter","discourage"],lv:"intermediate"},
+  {w:"Insular",h:"संकीर्ण",m:"narrow-minded",s:["narrow-minded","isolated","parochial"],a:["open-minded","cosmopolitan"],lv:"advanced"},
+  {w:"Intangible",h:"अमूर्त",m:"not physical",s:["abstract","immaterial","incorporeal"],a:["tangible","physical"],lv:"intermediate"},
+  {w:"Integrity",h:"ईमानदारी",m:"honesty",s:["honesty","uprightness","probity"],a:["dishonesty","corruption"],lv:"basic"},
+  {w:"Intrepid",h:"निडर",m:"fearless",s:["fearless","bold","dauntless"],a:["timid","cowardly"],lv:"advanced"},
+  {w:"Intrinsic",h:"आंतरिक",m:"inherent",s:["inherent","innate","essential"],a:["extrinsic","external"],lv:"advanced"},
+  {w:"Inundate",h:"बाढ़ लाना",m:"to flood",s:["flood","overwhelm","deluge"],a:["drain","dry"],lv:"advanced"},
+  {w:"Inveterate",h:"पुराना",m:"long-standing",s:["chronic","habitual","confirmed"],a:["occasional","temporary"],lv:"advanced"},
+  {w:"Irascible",h:"चिड़चिड़ा",m:"easily angered",s:["irritable","testy","short-tempered"],a:["calm","patient"],lv:"advanced"},
+  {w:"Ironic",h:"व्यंग्यपूर्ण",m:"sarcastic, contradictory",s:["sarcastic","mocking","contradictory"],a:["sincere","straightforward"],lv:"intermediate"},
+  {w:"Irreproachable",h:"निर्दोष",m:"beyond criticism",s:["blameless","faultless","impeccable"],a:["blameworthy","culpable"],lv:"advanced"},
+  {w:"Jubilant",h:"आनंदित",m:"joyful",s:["joyful","elated","jubilant"],a:["sad","depressed"],lv:"intermediate"},
+  {w:"Judicious",h:"विवेकपूर्ण",m:"wise",s:["wise","prudent","sensible"],a:["foolish","imprudent"],lv:"advanced"},
+  {w:"Juxtapose",h:"साथ रखना",m:"to place side by side",s:["compare","contrast","place together"],a:["separate","isolate"],lv:"advanced"},
+  {w:"Kindle",h:"प्रज्वलित करना",m:"to ignite",s:["ignite","spark","arouse"],a:["extinguish","douse"],lv:"intermediate"},
+  {w:"Labyrinth",h:"भूलभुलैया",m:"maze",s:["maze","tangle","complexity"],a:["simplicity","clarity"],lv:"advanced"},
+  {w:"Laconic",h:"अल्पभाषी",m:"using few words",s:["brief","concise","terse"],a:["verbose","wordy"],lv:"advanced"},
+  {w:"Lament",h:"विलाप करना",m:"to mourn",s:["mourn","grieve","bewail"],a:["celebrate","rejoice"],lv:"intermediate"},
+  {w:"Languid",h:"शिथिल",m:"weak, listless",s:["weak","listless","sluggish"],a:["energetic","vigorous"],lv:"advanced"},
+  {w:"Latent",h:"अव्यक्त",m:"hidden",s:["hidden","dormant","potential"],a:["active","manifest"],lv:"advanced"},
+  {w:"Laudable",h:"प्रशंसनीय",m:"praiseworthy",s:["praiseworthy","commendable","admirable"],a:["blameworthy","despicable"],lv:"advanced"},
+  {w:"Lethargic",h:"सुस्त",m:"sluggish",s:["sluggish","inactive","lazy"],a:["energetic","active"],lv:"intermediate"},
+  {w:"Levity",h:"हल्कापन",m:"lightness, humor",s:["frivolity","humor","lightheartedness"],a:["seriousness","gravity"],lv:"advanced"},
+  {w:"Loquacious",h:"बातूनी",m:"talkative",s:["talkative","garrulous","voluble"],a:["taciturn","silent"],lv:"advanced"},
+  {w:"Lucid",h:"स्पष्ट",m:"clear",s:["clear","coherent","intelligible"],a:["confusing","murky"],lv:"intermediate"},
+  {w:"Lugubrious",h:"शोकपूर्ण",m:"mournful",s:["mournful","gloomy","sorrowful"],a:["cheerful","joyful"],lv:"advanced"},
+  {w:"Luminous",h:"चमकदार",m:"bright",s:["bright","glowing","radiant"],a:["dark","dim"],lv:"intermediate"},
+  {w:"Magnanimous",h:"उदार",m:"generous, noble",s:["generous","noble","forgiving"],a:["petty","vindictive"],lv:"advanced"},
+  {w:"Malevolent",h:"दुर्भावनापूर्ण",m:"evil-intentioned",s:["malicious","spiteful","evil"],a:["benevolent","kind"],lv:"advanced"},
+  {w:"Malleable",h:"लचीला",m:"easily influenced",s:["pliable","flexible","adaptable"],a:["rigid","inflexible"],lv:"advanced"},
+  {w:"Mandate",h:"आदेश",m:"authoritative order",s:["order","command","decree"],a:["request","suggestion"],lv:"intermediate"},
+  {w:"Manifest",h:"प्रत्यक्ष",m:"obvious",s:["obvious","evident","apparent"],a:["hidden","obscure"],lv:"intermediate"},
+  {w:"Meager",h:"अल्प",m:"insufficient",s:["scanty","insufficient","sparse"],a:["abundant","ample"],lv:"intermediate"},
+  {w:"Mendacious",h:"झूठा",m:"lying",s:["dishonest","untruthful","deceitful"],a:["truthful","honest"],lv:"advanced"},
+  {w:"Mercurial",h:"चंचल",m:"volatile",s:["volatile","changeable","erratic"],a:["stable","constant"],lv:"advanced"},
+  {w:"Meticulous",h:"अति सतर्क",m:"very careful",s:["careful","thorough","precise"],a:["careless","sloppy"],lv:"intermediate"},
+  {w:"Mitigate",h:"कम करना",m:"to lessen",s:["lessen","alleviate","reduce"],a:["aggravate","intensify"],lv:"advanced"},
+  {w:"Morose",h:"चिड़चिड़ा",m:"gloomy",s:["gloomy","sullen","sour"],a:["cheerful","happy"],lv:"advanced"},
+  {w:"Mundane",h:"सांसारिक",m:"ordinary",s:["ordinary","routine","commonplace"],a:["extraordinary","exciting"],lv:"advanced"},
+  {w:"Munificent",h:"अति उदार",m:"very generous",s:["generous","liberal","bountiful"],a:["stingy","miserly"],lv:"advanced"},
+  {w:"Myriad",h:"अनेक",m:"countless",s:["countless","numerous","innumerable"],a:["few","limited"],lv:"intermediate"},
+  {w:"Naive",h:"भोला",m:"innocent, unsophisticated",s:["innocent","gullible","simple"],a:["sophisticated","worldly"],lv:"intermediate"},
+  {w:"Nascent",h:"नवजात",m:"emerging",s:["emerging","budding","incipient"],a:["mature","developed"],lv:"advanced"},
+  {w:"Nebulous",h:"अस्पष्ट",m:"vague",s:["vague","unclear","hazy"],a:["clear","definite"],lv:"advanced"},
+  {w:"Nefarious",h:"दुष्ट",m:"wicked",s:["wicked","villainous","heinous"],a:["virtuous","noble"],lv:"advanced"},
+  {w:"Negligent",h:"लापरवाह",m:"careless",s:["careless","remiss","lax"],a:["careful","diligent"],lv:"intermediate"},
+  {w:"Nonchalant",h:"बेपरवाह",m:"casual, indifferent",s:["indifferent","casual","unconcerned"],a:["concerned","anxious"],lv:"advanced"},
+  {w:"Notorious",h:"कुख्यात",m:"infamous",s:["infamous","disreputable","scandalous"],a:["reputable","honorable"],lv:"intermediate"},
+  {w:"Novice",h:"नौसिखिया",m:"beginner",s:["beginner","tyro","apprentice"],a:["expert","veteran"],lv:"intermediate"},
+  {w:"Noxious",h:"हानिकारक",m:"harmful",s:["harmful","toxic","poisonous"],a:["harmless","beneficial"],lv:"advanced"},
+  {w:"Nuance",h:"सूक्ष्म अंतर",m:"subtle difference",s:["subtlety","shade","distinction"],a:["sameness","uniformity"],lv:"advanced"},
+  {w:"Obdurate",h:"हठी",m:"stubborn",s:["stubborn","unyielding","inflexible"],a:["flexible","yielding"],lv:"advanced"},
+  {w:"Obfuscate",h:"उलझाना",m:"to confuse",s:["confuse","obscure","cloud"],a:["clarify","illuminate"],lv:"advanced"},
+  {w:"Objective",h:"वस्तुनिष्ठ",m:"unbiased",s:["unbiased","impartial","fair"],a:["biased","subjective"],lv:"intermediate"},
+  {w:"Oblivious",h:"अनजान",m:"unaware",s:["unaware","ignorant","unconscious"],a:["aware","conscious"],lv:"intermediate"},
+  {w:"Obscure",h:"अस्पष्ट",m:"unclear",s:["unclear","vague","cryptic"],a:["clear","obvious"],lv:"intermediate"},
+  {w:"Obsequious",h:"चापलूस",m:"excessively obedient",s:["servile","fawning","sycophantic"],a:["assertive","independent"],lv:"advanced"},
+  {w:"Obsolete",h:"पुराना",m:"outdated",s:["outdated","archaic","antiquated"],a:["current","modern"],lv:"intermediate"},
+  {w:"Obstinate",h:"हठी",m:"stubborn",s:["stubborn","headstrong","inflexible"],a:["flexible","compliant"],lv:"intermediate"},
+  {w:"Obtrusive",h:"दखल देने वाला",m:"noticeable, intrusive",s:["intrusive","forward","prominent"],a:["unobtrusive","inconspicuous"],lv:"advanced"},
+  {w:"Obviate",h:"रोकना",m:"to prevent",s:["prevent","avert","avoid"],a:["cause","necessitate"],lv:"advanced"},
+  {w:"Occlude",h:"बंद करना",m:"to block",s:["block","obstruct","close"],a:["open","clear"],lv:"advanced"},
+  {w:"Odious",h:"घृणित",m:"hateful",s:["hateful","repugnant","detestable"],a:["delightful","lovable"],lv:"advanced"},
+  {w:"Officious",h:"दखलंदाज",m:"meddlesome",s:["meddlesome","intrusive","bossy"],a:["unobtrusive","helpful"],lv:"advanced"},
+  {w:"Ominous",h:"अशुभ",m:"threatening",s:["threatening","foreboding","sinister"],a:["promising","auspicious"],lv:"intermediate"},
+  {w:"Onerous",h:"बोझिल",m:"burdensome",s:["burdensome","difficult","troublesome"],a:["easy","light"],lv:"advanced"},
+  {w:"Opaque",h:"अपारदर्शी",m:"not transparent",s:["cloudy","murky","unclear"],a:["transparent","clear"],lv:"intermediate"},
+  {w:"Opulent",h:"वैभवशाली",m:"wealthy, luxurious",s:["luxurious","wealthy","sumptuous"],a:["poor","destitute"],lv:"advanced"},
+  {w:"Ostentatious",h:"दिखावटी",m:"showy",s:["showy","pretentious","flamboyant"],a:["modest","unassuming"],lv:"advanced"},
+  {w:"Ostracize",h:"बहिष्कृत करना",m:"to exclude",s:["exclude","shun","banish"],a:["include","embrace"],lv:"advanced"},
+  {w:"Pacific",h:"शांतिपूर्ण",m:"peaceful",s:["peaceful","calm","tranquil"],a:["hostile","aggressive"],lv:"intermediate"},
+  {w:"Painstaking",h:"श्रमसाध्य",m:"very careful",s:["careful","meticulous","thorough"],a:["careless","negligent"],lv:"intermediate"},
+  {w:"Palpable",h:"स्पष्ट",m:"tangible, obvious",s:["tangible","obvious","perceptible"],a:["intangible","imperceptible"],lv:"advanced"},
+  {w:"Paltry",h:"तुच्छ",m:"insignificant",s:["insignificant","trivial","meager"],a:["significant","substantial"],lv:"advanced"},
+  {w:"Paradox",h:"विरोधाभास",m:"contradiction",s:["contradiction","absurdity","enigma"],a:["consistency","logic"],lv:"intermediate"},
+  {w:"Paragon",h:"आदर्श",m:"model of excellence",s:["model","epitome","exemplar"],a:["failure","inferior"],lv:"advanced"},
+  {w:"Parochial",h:"संकीर्ण",m:"narrow-minded",s:["narrow","local","insular"],a:["broad-minded","cosmopolitan"],lv:"advanced"},
+  {w:"Parsimonious",h:"कंजूस",m:"stingy",s:["stingy","miserly","frugal"],a:["generous","liberal"],lv:"advanced"},
+  {w:"Partisan",h:"पक्षपाती",m:"biased",s:["biased","one-sided","partial"],a:["impartial","neutral"],lv:"advanced"},
+  {w:"Paucity",h:"कमी",m:"scarcity",s:["scarcity","dearth","shortage"],a:["abundance","plenty"],lv:"advanced"},
+  {w:"Peculiar",h:"विचित्र",m:"strange",s:["strange","odd","unusual"],a:["normal","ordinary"],lv:"intermediate"},
+  {w:"Penchant",h:"रुझान",m:"liking",s:["liking","fondness","inclination"],a:["dislike","aversion"],lv:"advanced"},
+  {w:"Penury",h:"गरीबी",m:"poverty",s:["poverty","destitution","indigence"],a:["wealth","affluence"],lv:"advanced"},
+  {w:"Perfidious",h:"विश्वासघाती",m:"treacherous",s:["treacherous","disloyal","deceitful"],a:["loyal","faithful"],lv:"advanced"},
+  {w:"Perfunctory",h:"औपचारिक",m:"done routinely",s:["routine","superficial","careless"],a:["thorough","careful"],lv:"advanced"},
+  {w:"Perilous",h:"खतरनाक",m:"dangerous",s:["dangerous","risky","hazardous"],a:["safe","secure"],lv:"intermediate"},
+  {w:"Pernicious",h:"हानिकारक",m:"harmful",s:["harmful","destructive","noxious"],a:["beneficial","harmless"],lv:"advanced"},
+  {w:"Perpetuate",h:"बनाए रखना",m:"to continue",s:["continue","sustain","preserve"],a:["end","terminate"],lv:"intermediate"},
+  {w:"Perspicacious",h:"कुशाग्र",m:"insightful",s:["insightful","perceptive","astute"],a:["obtuse","unperceptive"],lv:"advanced"},
+  {w:"Pertinent",h:"प्रासंगिक",m:"relevant",s:["relevant","applicable","germane"],a:["irrelevant","unrelated"],lv:"intermediate"},
+  {w:"Pervasive",h:"व्यापक",m:"widespread",s:["widespread","prevalent","omnipresent"],a:["limited","rare"],lv:"advanced"},
+  {w:"Petulant",h:"चिड़चिड़ा",m:"irritable",s:["irritable","peevish","sulky"],a:["good-natured","patient"],lv:"advanced"},
+  {w:"Philanthropic",h:"परोपकारी",m:"charitable",s:["charitable","generous","humanitarian"],a:["selfish","miserly"],lv:"intermediate"},
+  {w:"Placate",h:"शांत करना",m:"to calm",s:["calm","appease","pacify"],a:["provoke","anger"],lv:"advanced"},
+  {w:"Placid",h:"शांत",m:"calm",s:["calm","peaceful","tranquil"],a:["agitated","turbulent"],lv:"intermediate"},
+  {w:"Plausible",h:"विश्वसनीय",m:"believable",s:["believable","credible","likely"],a:["implausible","unlikely"],lv:"intermediate"},
+  {w:"Plethora",h:"अधिकता",m:"excess",s:["excess","abundance","surplus"],a:["scarcity","dearth"],lv:"advanced"},
+  {w:"Poignant",h:"मार्मिक",m:"emotionally touching",s:["touching","moving","evocative"],a:["unmoving","dull"],lv:"advanced"},
+  {w:"Polemical",h:"विवादास्पद",m:"controversial",s:["controversial","argumentative","contentious"],a:["agreeable","uncontroversial"],lv:"advanced"},
+  {w:"Pragmatic",h:"व्यावहारिक",m:"practical",s:["practical","realistic","sensible"],a:["idealistic","impractical"],lv:"intermediate"},
+  {w:"Precarious",h:"अनिश्चित",m:"uncertain, risky",s:["risky","unstable","insecure"],a:["safe","secure"],lv:"advanced"},
+  {w:"Precedent",h:"मिसाल",m:"earlier example",s:["example","model","standard"],a:["novelty","exception"],lv:"intermediate"},
+  {w:"Preclude",h:"रोकना",m:"to prevent",s:["prevent","hinder","prohibit"],a:["allow","permit"],lv:"advanced"},
+  {w:"Precocious",h:"असामयिक प्रतिभाशाली",m:"advanced for age",s:["advanced","mature","gifted"],a:["backward","retarded"],lv:"advanced"},
+  {w:"Predilection",h:"पूर्वाग्रह",m:"preference",s:["preference","liking","fondness"],a:["aversion","dislike"],lv:"advanced"},
+  {w:"Predisposed",h:"प्रवृत्त",m:"inclined",s:["inclined","prone","susceptible"],a:["disinclined","resistant"],lv:"advanced"},
+  {w:"Preposterous",h:"असंगत",m:"absurd",s:["absurd","ridiculous","foolish"],a:["sensible","reasonable"],lv:"advanced"},
+  {w:"Prescient",h:"पूर्वज्ञानी",m:"knowing the future",s:["foresighted","prophetic","visionary"],a:["unforeseeing","blind"],lv:"advanced"},
+  {w:"Prevalent",h:"प्रचलित",m:"widespread",s:["widespread","common","pervasive"],a:["rare","uncommon"],lv:"intermediate"},
+  {w:"Prodigal",h:"फिजूलखर्च",m:"wasteful",s:["wasteful","extravagant","lavish"],a:["thrifty","frugal"],lv:"advanced"},
+  {w:"Prodigious",h:"विशाल",m:"enormous",s:["enormous","immense","vast"],a:["small","tiny"],lv:"advanced"},
+  {w:"Proficient",h:"कुशल",m:"skilled",s:["skilled","expert","adept"],a:["incompetent","unskilled"],lv:"intermediate"},
+  {w:"Profound",h:"गहन",m:"deep",s:["deep","intense","thoughtful"],a:["shallow","superficial"],lv:"intermediate"},
+  {w:"Profuse",h:"विपुल",m:"abundant",s:["abundant","plentiful","copious"],a:["sparse","scarce"],lv:"advanced"},
+  {w:"Proliferate",h:"तेजी से बढ़ना",m:"to multiply",s:["multiply","increase","spread"],a:["decrease","decline"],lv:"advanced"},
+  {w:"Prolific",h:"उत्पादक",m:"productive",s:["productive","fruitful","fertile"],a:["unproductive","barren"],lv:"advanced"},
+  {w:"Prominent",h:"प्रमुख",m:"well-known",s:["well-known","eminent","notable"],a:["unknown","obscure"],lv:"intermediate"},
+  {w:"Propensity",h:"प्रवृत्ति",m:"tendency",s:["tendency","inclination","disposition"],a:["aversion","disinclination"],lv:"advanced"},
+  {w:"Propitious",h:"अनुकूल",m:"favorable",s:["favorable","auspicious","promising"],a:["unfavorable","inauspicious"],lv:"advanced"},
+  {w:"Prosaic",h:"नीरस",m:"dull, ordinary",s:["dull","ordinary","mundane"],a:["poetic","exciting"],lv:"advanced"},
+  {w:"Proscribe",h:"प्रतिबंधित करना",m:"to forbid",s:["forbid","prohibit","ban"],a:["allow","permit"],lv:"advanced"},
+  {w:"Protract",h:"लंबा करना",m:"to prolong",s:["prolong","extend","lengthen"],a:["shorten","abbreviate"],lv:"advanced"},
+  {w:"Provident",h:"दूरदर्शी",m:"thrifty, prepared",s:["thrifty","prudent","foresighted"],a:["improvident","careless"],lv:"advanced"},
+  {w:"Prudent",h:"विवेकपूर्ण",m:"wise, cautious",s:["wise","cautious","judicious"],a:["rash","imprudent"],lv:"intermediate"},
+  {w:"Pugnacious",h:"लड़ाकू",m:"aggressive",s:["aggressive","combative","belligerent"],a:["peaceful","pacifist"],lv:"advanced"},
+  {w:"Punctilious",h:"बारीक",m:"very careful",s:["careful","meticulous","precise"],a:["careless","negligent"],lv:"advanced"},
+  {w:"Pungent",h:"तीखा",m:"sharp-smelling",s:["sharp","acrid","spicy"],a:["mild","bland"],lv:"intermediate"},
+  {w:"Quaint",h:"अनोखा",m:"charmingly old-fashioned",s:["charming","picturesque","old-fashioned"],a:["modern","ordinary"],lv:"intermediate"},
+  {w:"Quandary",h:"असमंजस",m:"dilemma",s:["dilemma","predicament","difficulty"],a:["solution","certainty"],lv:"advanced"},
+  {w:"Quell",h:"शांत करना",m:"to suppress",s:["suppress","subdue","crush"],a:["encourage","provoke"],lv:"intermediate"},
+  {w:"Querulous",h:"शिकायती",m:"complaining",s:["complaining","peevish","whiny"],a:["content","cheerful"],lv:"advanced"},
+  {w:"Quiescent",h:"निष्क्रिय",m:"inactive",s:["inactive","dormant","still"],a:["active","restless"],lv:"advanced"},
+  {w:"Quintessential",h:"सारभूत",m:"perfect example",s:["typical","essential","archetypal"],a:["atypical","unusual"],lv:"advanced"},
+  {w:"Quixotic",h:"काल्पनिक",m:"idealistic, unrealistic",s:["idealistic","impractical","romantic"],a:["realistic","pragmatic"],lv:"advanced"},
+  {w:"Rampant",h:"बेकाबू",m:"uncontrolled",s:["uncontrolled","widespread","unchecked"],a:["controlled","restrained"],lv:"intermediate"},
+  {w:"Rancor",h:"द्वेष",m:"bitterness",s:["bitterness","resentment","hostility"],a:["goodwill","amity"],lv:"advanced"},
+  {w:"Rapacious",h:"लालची",m:"greedy",s:["greedy","voracious","avaricious"],a:["generous","selfless"],lv:"advanced"},
+  {w:"Rebuke",h:"डांटना",m:"to scold",s:["scold","reprimand","chide"],a:["praise","commend"],lv:"intermediate"},
+  {w:"Recalcitrant",h:"अवज्ञाकारी",m:"stubbornly disobedient",s:["defiant","unruly","obstinate"],a:["obedient","compliant"],lv:"advanced"},
+  {w:"Recluse",h:"एकांतवासी",m:"hermit",s:["hermit","loner","solitary"],a:["socialite","extrovert"],lv:"advanced"},
+  {w:"Redundant",h:"अनावश्यक",m:"unnecessary, repetitive",s:["superfluous","excessive","repetitive"],a:["essential","necessary"],lv:"intermediate"},
+  {w:"Refute",h:"खंडन करना",m:"to disprove",s:["disprove","rebut","contradict"],a:["confirm","prove"],lv:"intermediate"},
+  {w:"Reiterate",h:"दोहराना",m:"to repeat",s:["repeat","restate","echo"],a:["contradict","withdraw"],lv:"intermediate"},
+  {w:"Relegate",h:"नीचे करना",m:"to demote",s:["demote","downgrade","consign"],a:["promote","elevate"],lv:"advanced"},
+  {w:"Relentless",h:"निर्दयी",m:"persistent",s:["persistent","unyielding","inexorable"],a:["yielding","intermittent"],lv:"intermediate"},
+  {w:"Relinquish",h:"त्यागना",m:"to give up",s:["surrender","abandon","cede"],a:["retain","keep"],lv:"intermediate"},
+  {w:"Remiss",h:"लापरवाह",m:"negligent",s:["negligent","careless","lax"],a:["diligent","careful"],lv:"advanced"},
+  {w:"Remorse",h:"पश्चात्ताप",m:"guilt",s:["guilt","regret","contrition"],a:["indifference","satisfaction"],lv:"intermediate"},
+  {w:"Renounce",h:"त्यागना",m:"to give up",s:["abandon","relinquish","forsake"],a:["claim","retain"],lv:"advanced"},
+  {w:"Replete",h:"भरा हुआ",m:"full",s:["full","abundant","filled"],a:["empty","devoid"],lv:"advanced"},
+  {w:"Repress",h:"दबाना",m:"to hold back",s:["suppress","restrain","subdue"],a:["release","express"],lv:"intermediate"},
+  {w:"Reprimand",h:"फटकारना",m:"to scold",s:["scold","rebuke","censure"],a:["praise","commend"],lv:"intermediate"},
+  {w:"Reproach",h:"दोष देना",m:"to blame",s:["blame","rebuke","reprimand"],a:["praise","approve"],lv:"advanced"},
+  {w:"Repudiate",h:"अस्वीकार करना",m:"to reject",s:["reject","renounce","disown"],a:["accept","embrace"],lv:"advanced"},
+  {w:"Rescind",h:"रद्द करना",m:"to cancel",s:["cancel","revoke","annul"],a:["enforce","uphold"],lv:"advanced"},
+  {w:"Resilient",h:"लचीला",m:"able to recover",s:["tough","adaptable","buoyant"],a:["fragile","brittle"],lv:"intermediate"},
+  {w:"Resolute",h:"दृढ़",m:"determined",s:["determined","firm","steadfast"],a:["irresolute","wavering"],lv:"advanced"},
+  {w:"Reticent",h:"अल्पभाषी",m:"reserved",s:["reserved","quiet","reticent"],a:["talkative","open"],lv:"advanced"},
+  {w:"Retract",h:"वापस लेना",m:"to withdraw",s:["withdraw","take back","recant"],a:["confirm","maintain"],lv:"intermediate"},
+  {w:"Revere",h:"सम्मान करना",m:"to respect deeply",s:["respect","venerate","honor"],a:["despise","scorn"],lv:"advanced"},
+  {w:"Rhetoric",h:"वाक्पटुता",m:"persuasive language",s:["oratory","eloquence","persuasion"],a:["plain speech","literalness"],lv:"advanced"},
+  {w:"Rigorous",h:"कठोर",m:"strict, thorough",s:["strict","thorough","exacting"],a:["lax","lenient"],lv:"intermediate"},
+  {w:"Robust",h:"मजबूत",m:"strong",s:["strong","sturdy","vigorous"],a:["weak","frail"],lv:"intermediate"},
+  {w:"Rudimentary",h:"प्रारंभिक",m:"basic",s:["basic","elementary","primitive"],a:["advanced","developed"],lv:"intermediate"},
+  {w:"Ruthless",h:"निर्दयी",m:"merciless",s:["merciless","pitiless","cruel"],a:["merciful","compassionate"],lv:"intermediate"},
+  {w:"Sagacious",h:"बुद्धिमान",m:"wise",s:["wise","shrewd","astute"],a:["foolish","ignorant"],lv:"advanced"},
+  {w:"Salient",h:"प्रमुख",m:"prominent",s:["prominent","notable","striking"],a:["minor","insignificant"],lv:"advanced"},
+  {w:"Sanctimonious",h:"पाखंडी",m:"hypocritically holy",s:["hypocritical","self-righteous","pious"],a:["sincere","humble"],lv:"advanced"},
+  {w:"Sanguine",h:"आशावादी",m:"optimistic",s:["optimistic","hopeful","cheerful"],a:["pessimistic","gloomy"],lv:"advanced"},
+  {w:"Sardonic",h:"व्यंग्यपूर्ण",m:"mocking",s:["mocking","sarcastic","cynical"],a:["sincere","genuine"],lv:"advanced"},
+  {w:"Scathing",h:"कठोर",m:"severe, critical",s:["harsh","critical","caustic"],a:["mild","complimentary"],lv:"advanced"},
+  {w:"Skeptical",h:"संदेहवादी",m:"doubtful",s:["doubtful","questioning","disbelieving"],a:["credulous","trusting"],lv:"intermediate"},
+  {w:"Scrupulous",h:"ईमानदार",m:"moral, careful",s:["ethical","careful","meticulous"],a:["unscrupulous","careless"],lv:"advanced"},
+  {w:"Scrutinize",h:"जांचना",m:"to examine closely",s:["examine","inspect","study"],a:["skim","ignore"],lv:"intermediate"},
+  {w:"Sedulous",h:"परिश्रमी",m:"diligent",s:["diligent","persistent","careful"],a:["lazy","negligent"],lv:"advanced"},
+  {w:"Serene",h:"शांत",m:"calm",s:["calm","peaceful","tranquil"],a:["agitated","turbulent"],lv:"intermediate"},
+  {w:"Servile",h:"चापलूस",m:"slavish",s:["slavish","submissive","obsequious"],a:["assertive","independent"],lv:"advanced"},
+  {w:"Sinister",h:"अशुभ",m:"evil",s:["evil","ominous","threatening"],a:["benign","auspicious"],lv:"intermediate"},
+  {w:"Skeptic",h:"संदेहवादी",m:"doubter",s:["doubter","cynic","unbeliever"],a:["believer","optimist"],lv:"intermediate"},
+  {w:"Sluggish",h:"सुस्त",m:"slow",s:["slow","lethargic","inactive"],a:["energetic","active"],lv:"intermediate"},
+  {w:"Solicitous",h:"चिंतित",m:"concerned",s:["concerned","caring","attentive"],a:["indifferent","unconcerned"],lv:"advanced"},
+  {w:"Soporific",h:"निद्राजनक",m:"sleep-inducing",s:["sleepy","drowsy","sedative"],a:["stimulating","invigorating"],lv:"advanced"},
+  {w:"Sordid",h:"नीच",m:"dirty, immoral",s:["dirty","squalid","immoral"],a:["clean","noble"],lv:"advanced"},
+  {w:"Spurious",h:"जाली",m:"fake",s:["fake","false","counterfeit"],a:["genuine","authentic"],lv:"advanced"},
+  {w:"Sporadic",h:"कभी-कभी",m:"occasional",s:["occasional","intermittent","irregular"],a:["constant","regular"],lv:"intermediate"},
+  {w:"Squalid",h:"गंदा",m:"dirty",s:["dirty","filthy","foul"],a:["clean","tidy"],lv:"advanced"},
+  {w:"Stagnant",h:"स्थिर",m:"not moving",s:["still","motionless","inactive"],a:["flowing","active"],lv:"intermediate"},
+  {w:"Staunch",h:"वफादार",m:"loyal",s:["loyal","steadfast","faithful"],a:["disloyal","unfaithful"],lv:"advanced"},
+  {w:"Steadfast",h:"दृढ़",m:"firm",s:["firm","loyal","constant"],a:["wavering","inconstant"],lv:"intermediate"},
+  {w:"Stigma",h:"कलंक",m:"mark of shame",s:["shame","disgrace","mark"],a:["honor","pride"],lv:"intermediate"},
+  {w:"Stoic",h:"विरक्त",m:"indifferent to pleasure/pain",s:["unemotional","indifferent","impassive"],a:["emotional","sensitive"],lv:"advanced"},
+  {w:"Stringent",h:"कठोर",m:"strict",s:["strict","rigorous","severe"],a:["lenient","lax"],lv:"advanced"},
+  {w:"Stupendous",h:"विशाल",m:"amazing",s:["amazing","astonishing","huge"],a:["ordinary","small"],lv:"intermediate"},
+  {w:"Subjugate",h:"वश में करना",m:"to conquer",s:["conquer","enslave","subdue"],a:["liberate","free"],lv:"advanced"},
+  {w:"Sublime",h:"उदात्त",m:"lofty, magnificent",s:["magnificent","exalted","noble"],a:["ordinary","base"],lv:"advanced"},
+  {w:"Submissive",h:"विनम्र",m:"obedient",s:["obedient","compliant","yielding"],a:["defiant","assertive"],lv:"intermediate"},
+  {w:"Substantiate",h:"पुष्टि करना",m:"to prove",s:["prove","verify","corroborate"],a:["disprove","refute"],lv:"advanced"},
+  {w:"Subversive",h:"विध्वंसकारी",m:"undermining authority",s:["seditious","disruptive","treasonous"],a:["loyal","supportive"],lv:"advanced"},
+  {w:"Succinct",h:"संक्षिप्त",m:"brief, clear",s:["concise","brief","terse"],a:["verbose","wordy"],lv:"advanced"},
+  {w:"Supercilious",h:"घमंडी",m:"arrogant",s:["arrogant","haughty","disdainful"],a:["humble","modest"],lv:"advanced"},
+  {w:"Superfluous",h:"अनावश्यक",m:"unnecessary",s:["unnecessary","excess","redundant"],a:["essential","necessary"],lv:"advanced"},
+  {w:"Supplant",h:"प्रतिस्थापित करना",m:"to replace",s:["replace","displace","oust"],a:["retain","keep"],lv:"advanced"},
+  {w:"Surmise",h:"अनुमान लगाना",m:"to guess",s:["guess","conjecture","infer"],a:["know","verify"],lv:"advanced"},
+  {w:"Surmount",h:"पार पाना",m:"to overcome",s:["overcome","conquer","overleap"],a:["succumb","yield"],lv:"intermediate"},
+  {w:"Susceptible",h:"अतिसंवेदनशील",m:"vulnerable",s:["vulnerable","prone","liable"],a:["immune","resistant"],lv:"intermediate"},
+  {w:"Sycophant",h:"चापलूस",m:"flatterer",s:["flatterer","toady","obsequious person"],a:["critic","independent person"],lv:"advanced"},
+  {w:"Taciturn",h:"अल्पभाषी",m:"silent",s:["silent","reticent","reserved"],a:["talkative","garrulous"],lv:"advanced"},
+  {w:"Tangential",h:"अप्रासंगिक",m:"off-topic",s:["digressive","peripheral","irrelevant"],a:["central","relevant"],lv:"advanced"},
+  {w:"Tantamount",h:"समान",m:"equivalent",s:["equivalent","equal","same"],a:["different","unequal"],lv:"advanced"},
+  {w:"Tedious",h:"उबाऊ",m:"boring",s:["boring","dull","monotonous"],a:["interesting","exciting"],lv:"intermediate"},
+  {w:"Temerity",h:"दुस्साहस",m:"boldness",s:["boldness","audacity","nerve"],a:["timidity","caution"],lv:"advanced"},
+  {w:"Temperate",h:"संयमी",m:"moderate",s:["moderate","mild","restrained"],a:["extreme","immoderate"],lv:"advanced"},
+  {w:"Tenacious",h:"दृढ़",m:"persistent",s:["persistent","determined","dogged"],a:["yielding","irresolute"],lv:"advanced"},
+  {w:"Tenuous",h:"कमजोर",m:"weak, thin",s:["weak","flimsy","fragile"],a:["strong","substantial"],lv:"advanced"},
+  {w:"Terse",h:"संक्षिप्त",m:"brief",s:["brief","concise","curt"],a:["verbose","rambling"],lv:"advanced"},
+  {w:"Thrifty",h:"किफायती",m:"economical",s:["economical","frugal","sparing"],a:["wasteful","extravagant"],lv:"intermediate"},
+  {w:"Timorous",h:"डरपोक",m:"fearful",s:["fearful","timid","apprehensive"],a:["bold","fearless"],lv:"advanced"},
+  {w:"Tirade",h:"गुस्से भाषण",m:"angry speech",s:["diatribe","harangue","rant"],a:["praise","compliment"],lv:"advanced"},
+  {w:"Torpid",h:"सुस्त",m:"sluggish",s:["sluggish","inactive","lethargic"],a:["active","energetic"],lv:"advanced"},
+  {w:"Tortuous",h:"टेढ़ा-मेढ़ा",m:"winding, complex",s:["winding","twisted","complex"],a:["straight","simple"],lv:"advanced"},
+  {w:"Tractable",h:"वश्य",m:"manageable",s:["manageable","docile","compliant"],a:["unmanageable","obstinate"],lv:"advanced"},
+  {w:"Tranquil",h:"शांत",m:"calm",s:["calm","peaceful","serene"],a:["agitated","turbulent"],lv:"intermediate"},
+  {w:"Transient",h:"क्षणिक",m:"temporary",s:["temporary","fleeting","ephemeral"],a:["permanent","lasting"],lv:"intermediate"},
+  {w:"Trepidation",h:"भय",m:"fear",s:["fear","apprehension","anxiety"],a:["confidence","calmness"],lv:"advanced"},
+  {w:"Trite",h:"घिसा-पिटा",m:"overused",s:["overused","hackneyed","stale"],a:["original","fresh"],lv:"advanced"},
+  {w:"Trivial",h:"तुच्छ",m:"unimportant",s:["unimportant","minor","insignificant"],a:["important","significant"],lv:"intermediate"},
+  {w:"Truculent",h:"लड़ाकू",m:"aggressive",s:["aggressive","belligerent","defiant"],a:["peaceful","cooperative"],lv:"advanced"},
+  {w:"Turbulent",h:"अशांत",m:"chaotic",s:["chaotic","stormy","unstable"],a:["calm","stable"],lv:"intermediate"},
+  {w:"Turpitude",h:"दुष्टता",m:"wickedness",s:["wickedness","depravity","vileness"],a:["virtue","morality"],lv:"advanced"},
+  {w:"Ubiquitous",h:"सर्वव्यापी",m:"everywhere",s:["omnipresent","pervasive","universal"],a:["rare","limited"],lv:"advanced"},
+  {w:"Unanimous",h:"सर्वसम्मत",m:"in complete agreement",s:["united","undivided","harmonious"],a:["divided","disagreeing"],lv:"intermediate"},
+  {w:"Unassailable",h:"अखंडनीय",m:"undeniable",s:["undeniable","impregnable","invincible"],a:["vulnerable","disputable"],lv:"advanced"},
+  {w:"Unctuous",h:"चापलूस",m:"insincerely smooth",s:["smooth","oily","insincere"],a:["sincere","genuine"],lv:"advanced"},
+  {w:"Undermine",h:"कमजोर करना",m:"to weaken",s:["weaken","erode","subvert"],a:["strengthen","support"],lv:"intermediate"},
+  {w:"Undulate",h:"लहराना",m:"to move in waves",s:["wave","ripple","surge"],a:["still","steady"],lv:"advanced"},
+  {w:"Unequivocal",h:"स्पष्ट",m:"clear, unambiguous",s:["clear","definite","unambiguous"],a:["equivocal","vague"],lv:"advanced"},
+  {w:"Unfathomable",h:"अगम्य",m:"incomprehensible",s:["incomprehensible","deep","inscrutable"],a:["understandable","shallow"],lv:"advanced"},
+  {w:"Unilateral",h:"एकपक्षीय",m:"one-sided",s:["one-sided","independent","solo"],a:["bilateral","multilateral"],lv:"intermediate"},
+  {w:"Unprecedented",h:"अभूतपूर्व",m:"never before seen",s:["unparalleled","novel","unmatched"],a:["common","precedented"],lv:"intermediate"},
+  {w:"Unscrupulous",h:"बेईमान",m:"without moral principles",s:["unethical","immoral","dishonest"],a:["ethical","honest"],lv:"advanced"},
+  {w:"Untenable",h:"अस्थिर",m:"indefensible",s:["indefensible","unsustainable","invalid"],a:["defensible","valid"],lv:"advanced"},
+  {w:"Unwieldy",h:"भारी",m:"hard to manage",s:["cumbersome","bulky","awkward"],a:["manageable","handy"],lv:"advanced"},
+  {w:"Usurp",h:"हड़पना",m:"to seize power",s:["seize","appropriate","commandeer"],a:["surrender","relinquish"],lv:"advanced"},
+  {w:"Vacillate",h:"झूलना",m:"to waver",s:["waver","hesitate","fluctuate"],a:["decide","resolve"],lv:"advanced"},
+  {w:"Venerate",h:"सम्मान करना",m:"to respect",s:["revere","honor","worship"],a:["despise","scorn"],lv:"advanced"},
+  {w:"Veracity",h:"सच्चाई",m:"truthfulness",s:["truthfulness","honesty","accuracy"],a:["falsehood","dishonesty"],lv:"advanced"},
+  {w:"Verbose",h:"वाचाल",m:"wordy",s:["wordy","long-winded","prolix"],a:["concise","terse"],lv:"advanced"},
+  {w:"Verdant",h:"हरा-भरा",m:"green, lush",s:["green","lush","flourishing"],a:["barren","dry"],lv:"advanced"},
+  {w:"Vestige",h:"अवशेष",m:"trace",s:["trace","remnant","remains"],a:["whole","entirety"],lv:"advanced"},
+  {w:"Vex",h:"चिढ़ाना",m:"to annoy",s:["annoy","irritate","distress"],a:["please","soothe"],lv:"intermediate"},
+  {w:"Viable",h:"व्यवहार्य",m:"practical, workable",s:["feasible","workable","practicable"],a:["impractical","unviable"],lv:"intermediate"},
+  {w:"Vicarious",h:"प्रतिनिधिक",m:"experienced through another",s:["indirect","secondhand","surrogate"],a:["direct","firsthand"],lv:"advanced"},
+  {w:"Vicissitude",h:"उतार-चढ़ाव",m:"change of fortune",s:["fluctuation","change","variation"],a:["stability","constancy"],lv:"advanced"},
+  {w:"Vigilant",h:"सतर्क",m:"alert",s:["alert","watchful","attentive"],a:["inattentive","careless"],lv:"intermediate"},
+  {w:"Vindicate",h:"निर्दोष सिद्ध करना",m:"to clear of blame",s:["justify","exonerate","absolve"],a:["blame","accuse"],lv:"advanced"},
+  {w:"Vindictive",h:"प्रतिशोधी",m:"revengeful",s:["revengeful","spiteful","vengeful"],a:["forgiving","merciful"],lv:"advanced"},
+  {w:"Virtuoso",h:"कलाकार",m:"master of an art",s:["master","expert","maestro"],a:["novice","amateur"],lv:"advanced"},
+  {w:"Virulent",h:"विषैला",m:"extremely harmful",s:["toxic","deadly","hostile"],a:["harmless","benign"],lv:"advanced"},
+  {w:"Vivacious",h:"जीवंत",m:"lively",s:["lively","animated","spirited"],a:["dull","lifeless"],lv:"intermediate"},
+  {w:"Vociferous",h:"मुखर",m:"loud, vocal",s:["loud","clamorous","outspoken"],a:["quiet","silent"],lv:"advanced"},
+  {w:"Volatile",h:"अस्थिर",m:"unstable",s:["unstable","unpredictable","explosive"],a:["stable","steady"],lv:"intermediate"},
+  {w:"Voracious",h:"लालची",m:"greedy, eager",s:["greedy","insatiable","ravenous"],a:["satisfied","indifferent"],lv:"advanced"},
+  {w:"Vulnerable",h:"असुरक्षित",m:"exposed to harm",s:["susceptible","exposed","weak"],a:["protected","invulnerable"],lv:"intermediate"},
+  {w:"Wane",h:"घटना",m:"to decrease",s:["decrease","diminish","decline"],a:["wax","increase"],lv:"intermediate"},
+  {w:"Wary",h:"सतर्क",m:"cautious",s:["cautious","careful","suspicious"],a:["careless","trusting"],lv:"intermediate"},
+  {w:"Wheedle",h:"फुसलाना",m:"to coax",s:["coax","cajole","flatter"],a:["force","compel"],lv:"advanced"},
+  {w:"Whimsical",h:"मनमौजी",m:"playful, fanciful",s:["fanciful","playful","capricious"],a:["serious","predictable"],lv:"intermediate"},
+  {w:"Wistful",h:"उदास",m:"yearning",s:["yearning","longing","melancholy"],a:["content","indifferent"],lv:"advanced"},
+  {w:"Wither",h:"मुरझाना",m:"to shrivel",s:["shrivel","wilt","decline"],a:["flourish","thrive"],lv:"intermediate"},
+  {w:"Zealot",h:"कट्टरपंथी",m:"fanatic",s:["fanatic","extremist","radical"],a:["moderate","centrist"],lv:"advanced"},
+  {w:"Zenith",h:"शीर्ष",m:"peak",s:["peak","summit","apex"],a:["nadir","bottom"],lv:"advanced"},
+  {w:"Zephyr",h:"हल्की हवा",m:"gentle breeze",s:["breeze","breath","gust"],a:["gale","storm"],lv:"advanced"}
+];
+
+/* =========================================================
+   GRAMMAR ENGINE
+   ========================================================= */
+const PASS_PERCENT = 70;
+let state = loadState();
+function defaultState() { return { unlocked: 1, scores: {}, correctTotal: 0 }; }
+function loadState() {
+  try {
+    const s = JSON.parse(localStorage.getItem('grammar-govt-v3-state'));
+    if (s && s.unlocked) return s;
+  } catch(e) {}
+  return defaultState();
+}
+function saveState() { try { localStorage.setItem('grammar-govt-v3-state', JSON.stringify(state)); } catch(e) {} }
+
+const levelTabsEl = document.getElementById('levelTabs');
+const grammarContentEl = document.getElementById('grammarContent');
+
+function renderLevelTabs() {
+  levelTabsEl.innerHTML = '';
+  LEVELS.forEach((lv, i) => {
+    const tab = document.createElement('div');
+    tab.className = 'level-tab';
+    const unlocked = i < state.unlocked;
+    if (!unlocked) tab.classList.add('locked');
+    if (state.scores[lv.id] !== undefined) {
+      const passed = (state.scores[lv.id] / lv.questions.length) * 100 >= PASS_PERCENT;
+      if (passed) tab.classList.add('done');
+    }
+    tab.innerHTML = `${lv.name}<span class="badge">${unlocked ? (state.scores[lv.id] !== undefined ? '✓' : 'open') : '🔒'}</span>`;
+    if (unlocked) tab.onclick = () => openLevel(i);
+    levelTabsEl.appendChild(tab);
+  });
+}
+
+function updateStats() {
+  document.getElementById('stat-level').textContent = Math.min(state.unlocked, LEVELS.length);
+  document.getElementById('stat-unlocked').textContent = `${Math.min(state.unlocked, LEVELS.length)} / ${LEVELS.length}`;
+  const answeredQ = Object.values(state.scores).reduce((a,b)=>a+b,0);
+  const totalQ = LEVELS.reduce((a,l)=>a+l.questions.length,0);
+  const pct = totalQ ? Math.round((answeredQ/totalQ)*100) : 0;
+  document.getElementById('stat-score').textContent = pct + '%';
+}
+
+let activeLevel = 0;
+function openLevel(i) {
+  if (i >= state.unlocked) return;
+  activeLevel = i;
+  document.querySelectorAll('#levelTabs .level-tab').forEach((t, idx) => {
+    t.classList.toggle('active', idx === i);
+  });
+  renderLevel(LEVELS[i]);
+}
+
+function renderLevel(lv) {
+  grammarContentEl.innerHTML = `
+    <h2>${lv.title}</h2>
+    <p class="subtitle">${lv.subtitle}</p>
+    <div>${lv.theory}</div>
+    <div class="center" style="margin-top:16px;">
+      <button class="btn btn-primary" onclick="startQuiz()">Start Practice Quiz (${lv.questions.length} questions)</button>
+      ${state.scores[lv.id] !== undefined ? `<p class="hint" style="margin-top:8px;">Last score: ${state.scores[lv.id]} / ${lv.questions.length}</p>` : ''}
+    </div>
+    <div id="quizArea" style="margin-top:16px;"></div>
+  `;
+}
+
+let quizState = null;
+function startQuiz() {
+  const lv = LEVELS[activeLevel];
+  const qs = lv.questions.map((q, idx) => ({...q, _orig: idx})).sort(() => Math.random()-0.5);
+  quizState = { levelId: lv.id, questions: qs, answers: new Array(qs.length).fill(null), index: 0, perQuestionSec: 30 };
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion() {
+  const area = document.getElementById('quizArea');
+  const q = quizState.questions[quizState.index];
+  const total = quizState.questions.length;
+  const current = quizState.index + 1;
+  area.innerHTML = `
+    <div class="quiz-header">
+      <strong>Question ${current} of ${total}</strong>
+      <div class="timer" id="timer">⏱ 30s</div>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:${(quizState.index/total)*100}%"></div></div>
+    <div class="quiz-question">
+      <p class="qtext">${q.q}</p>
+      <div id="options"></div>
+      <div class="feedback" id="qFeedback"></div>
+    </div>
+    <div class="center hidden" id="nextWrap"><button class="btn btn-success" id="nextBtn">Next →</button></div>
+  `;
+  const optionsEl = document.getElementById('options');
+  q.options.forEach((opt, j) => {
+    const btn = document.createElement('div');
+    btn.className = 'option';
+    btn.textContent = String.fromCharCode(65+j) + '. ' + opt;
+    btn.onclick = () => answerQuestion(j, btn);
+    optionsEl.appendChild(btn);
+  });
+  document.getElementById('nextBtn').onclick = nextQuestion;
+  startTimer();
+}
+
+let timerInterval = null;
+function startTimer() {
+  clearInterval(timerInterval);
+  let remaining = quizState.perQuestionSec;
+  const timerEl = document.getElementById('timer');
+  timerEl.textContent = `⏱ ${remaining}s`;
+  timerInterval = setInterval(() => {
+    remaining--;
+    if (remaining <= 0) { clearInterval(timerInterval); autoTimeout(); }
+    else timerEl.textContent = `⏱ ${remaining}s`;
+  }, 1000);
+}
+
+function autoTimeout() {
+  const q = quizState.questions[quizState.index];
+  const options = document.querySelectorAll('#options .option');
+  options.forEach(o => o.classList.add('disabled'));
+  if (options[q.correct]) options[q.correct].classList.add('correct');
+  const fb = document.getElementById('qFeedback');
+  fb.textContent = '⏰ Time up! Correct: ' + q.options[q.correct];
+  fb.className = 'feedback wrong';
+  quizState.answers[quizState.index] = -1;
+  showNext();
+}
+
+function answerQuestion(chosen, btn) {
+  clearInterval(timerInterval);
+  const q = quizState.questions[quizState.index];
+  const options = document.querySelectorAll('#options .option');
+  options.forEach(o => o.classList.add('disabled'));
+  const fb = document.getElementById('qFeedback');
+  if (chosen === q.correct) {
+    btn.classList.add('correct');
+    fb.textContent = '✅ Correct! ' + q.explain;
+    fb.className = 'feedback correct';
+    quizState.answers[quizState.index] = chosen;
+  } else {
+    btn.classList.add('wrong');
+    options[q.correct].classList.add('correct');
+    fb.textContent = '❌ Correct: ' + q.options[q.correct] + ' — ' + q.explain;
+    fb.className = 'feedback wrong';
+    quizState.answers[quizState.index] = chosen;
+  }
+  showNext();
+}
+
+function showNext() {
+  document.getElementById('nextWrap').classList.remove('hidden');
+  if (quizState.index === quizState.questions.length - 1) {
+    document.getElementById('nextBtn').textContent = 'See Results';
+  }
+}
+
+function nextQuestion() {
+  if (quizState.index < quizState.questions.length - 1) {
+    quizState.index++;
+    renderQuizQuestion();
+  } else finishQuiz();
+}
+
+function finishQuiz() {
+  clearInterval(timerInterval);
+  const lv = LEVELS[activeLevel];
+  const qs = quizState.questions;
+  let correctCount = 0;
+  qs.forEach((q, i) => { if (quizState.answers[i] === q.correct) correctCount++; });
+  const prev = state.scores[lv.id];
+  if (prev === undefined || correctCount > prev) {
+    state.correctTotal += correctCount - (prev || 0);
+    state.scores[lv.id] = correctCount;
+  }
+  const pct = Math.round((correctCount/qs.length)*100);
+  const passed = pct >= PASS_PERCENT;
+  let unlockedNow = false;
+  if (passed && activeLevel + 1 < LEVELS.length && state.unlocked === activeLevel + 1) {
+    state.unlocked++;
+    unlockedNow = true;
+  }
+  saveState();
+  updateStats();
+  renderLevelTabs();
+
+  const area = document.getElementById('quizArea');
+  const reviewHtml = qs.map((q,i) => {
+    const ans = quizState.answers[i];
+    const ok = ans === q.correct;
+    const userText = (ans === -1 || ans === null) ? '<em>No answer</em>' : q.options[ans];
+    return `<div class="quiz-question" style="border-left:4px solid ${ok?'#48bb78':'#f56565'};">
+      <p class="qtext">${i+1}. ${q.q}</p>
+      <p style="font-size:0.85em;color:#4a5568;">Your answer: <b style="color:${ok?'#38a169':'#e53e3e'}">${userText}</b></p>
+      ${ok?'':`<p style="font-size:0.85em;color:#4a5568;">Correct: <b style="color:#38a169">${q.options[q.correct]}</b></p>`}
+      <p style="font-size:0.82em;color:#718096;margin-top:3px;">${q.explain}</p>
+    </div>`;
+  }).join('');
+
+  area.innerHTML = `
+    <div class="result-box">
+      <h3>${passed?'🎉 Passed!':'📘 Keep Practising'}</h3>
+      <div class="big">${correctCount} / ${qs.length}</div>
+      <p>Score: <b>${pct}%</b> (Pass: ${PASS_PERCENT}%)</p>
+      ${unlockedNow?'<p style="color:#38a169;font-weight:700;">🔓 Next level unlocked!</p>':''}
+    </div>
+    <h3 style="margin-top:16px;">📖 Answer Review</h3>
+    ${reviewHtml}
+    <div class="center" style="margin-top:14px;">
+      <button class="btn btn-outline" onclick="startQuiz()">Retry</button>
+      ${unlockedNow?`<button class="btn btn-primary" style="margin-left:8px;" onclick="openLevel(${activeLevel+1})">Next Level →</button>`:''}
+    </div>
+  `;
+}
+
+/* =========================================================
+   VOCABULARY UI
+   ========================================================= */
+let vocabPage = 0;
+const VOCAB_PER_PAGE = 60;
+let vocabFiltered = [];
+
+function initVocab() {
+  document.getElementById('stat-vocab').textContent = EXAM_VOCAB.length;
+  document.getElementById('vocabTotal').textContent = EXAM_VOCAB.length + ' words';
+  const letterSel = document.getElementById('vocabLetter');
+  const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  letters.forEach(l => {
+    const opt = document.createElement('option');
+    opt.value = l.toLowerCase();
+    opt.textContent = l;
+    letterSel.appendChild(opt);
+  });
+  const chips = document.getElementById('vocabChips');
+  ['all','basic','intermediate','advanced'].forEach((c, i) => {
+    const chip = document.createElement('div');
+    chip.className = 'filter-chip' + (i===0?' active':'');
+    chip.textContent = c.charAt(0).toUpperCase()+c.slice(1);
+    chip.onclick = () => {
+      document.querySelectorAll('#vocabChips .filter-chip').forEach(x=>x.classList.remove('active'));
+      chip.classList.add('active');
+      document.getElementById('vocabLevel').value = c === 'all' ? '' : c;
+      filterVocab();
+    };
+    chips.appendChild(chip);
+  });
+  filterVocab();
+  document.getElementById('vocabSearch').oninput = filterVocab;
+  document.getElementById('vocabLetter').onchange = filterVocab;
+  document.getElementById('vocabLevel').onchange = filterVocab;
+}
+
+function filterVocab() {
+  const search = document.getElementById('vocabSearch').value.toLowerCase().trim();
+  const letter = document.getElementById('vocabLetter').value;
+  const level = document.getElementById('vocabLevel').value;
+  vocabFiltered = EXAM_VOCAB.filter(v => {
+    if (search && !(v.w.toLowerCase().includes(search) || v.m.toLowerCase().includes(search) || v.h.includes(search))) return false;
+    if (letter && !v.w.toLowerCase().startsWith(letter)) return false;
+    if (level && v.lv !== level) return false;
+    return true;
+  });
+  vocabPage = 0;
+  renderVocabPage();
+}
+
+function renderVocabPage() {
+  const list = document.getElementById('vocabList');
+  const start = vocabPage * VOCAB_PER_PAGE;
+  const items = vocabFiltered.slice(start, start + VOCAB_PER_PAGE);
+  list.innerHTML = items.map(v => `
+    <div class="vocab-card">
+      <div class="word">${v.w}</div>
+      <div class="hindi">${v.h}</div>
+      <div class="meaning">${v.m}</div>
+      ${v.s && v.s.length ? `<div class="syn"><b>Syn:</b> ${v.s.join(', ')}</div>` : ''}
+      ${v.a && v.a.length ? `<div class="ant"><b>Ant:</b> ${v.a.join(', ')}</div>` : ''}
+      <div class="tag">${v.lv}</div>
+    </div>
+  `).join('');
+  const moreWrap = document.getElementById('vocabMoreWrap');
+  const totalPages = Math.ceil(vocabFiltered.length / VOCAB_PER_PAGE);
+  if (totalPages <= 1) { moreWrap.innerHTML = `<p class="hint">Showing ${vocabFiltered.length} words</p>`; return; }
+  moreWrap.innerHTML = `
+    <p class="hint" style="margin-bottom:8px;">Page ${vocabPage+1} of ${totalPages} · ${vocabFiltered.length} words</p>
+    <button class="btn btn-outline btn-sm" ${vocabPage===0?'disabled':''} onclick="vocabPagePrev()">← Prev</button>
+    <button class="btn btn-primary btn-sm" style="margin-left:6px;" ${vocabPage>=totalPages-1?'disabled':''} onclick="vocabPageNext()">Next →</button>
+  `;
+}
+function vocabPagePrev() { if (vocabPage>0) { vocabPage--; renderVocabPage(); window.scrollTo(0,0); } }
+function vocabPageNext() { const tp=Math.ceil(vocabFiltered.length/VOCAB_PER_PAGE); if (vocabPage<tp-1){ vocabPage++; renderVocabPage(); window.scrollTo(0,0);} }
+
+/* =========================================================
+   SYNONYM / ANTONYM QUIZ
+   ========================================================= */
+let synantState = null;
+function startSynAntQuiz(type) {
+  const pool = EXAM_VOCAB.filter(v => v.s && v.s.length >= 2 && v.a && v.a.length >= 1);
+  const shuffled = [...pool].sort(()=>Math.random()-0.5).slice(0, 10);
+  const questions = shuffled.map(v => {
+    let correct, distractors;
+    if (type === 'synonym') { correct = v.s[0]; distractors = v.a.slice(0,3); }
+    else { correct = v.a[0]; distractors = v.s.slice(0,3); }
+    while (distractors.length < 3) {
+      const r = EXAM_VOCAB[Math.floor(Math.random()*EXAM_VOCAB.length)];
+      const cand = r.s && r.s[0] ? r.s[0] : r.w;
+      if (cand !== correct && !distractors.includes(cand)) distractors.push(cand);
+    }
+    const opts = [correct, ...distractors.slice(0,3)].sort(()=>Math.random()-0.5);
+    return {
+      q: (type === 'synonym' ? 'Choose the SYNONYM of ' : 'Choose the ANTONYM of ') + '"' + v.w + '" (' + v.h + ')',
+      options: opts,
+      correct: opts.indexOf(correct),
+      explain: v.w + ' = ' + v.m + ' | Syn: ' + (v.s||[]).join(', ') + ' | Ant: ' + (v.a||[]).join(', ')
+    };
+  });
+  synantState = { questions, answers: new Array(questions.length).fill(null), index: 0, type };
+  renderSynAntQuestion();
+}
+
+function renderSynAntQuestion() {
+  const area = document.getElementById('synantArea');
+  const q = synantState.questions[synantState.index];
+  const total = synantState.questions.length;
+  area.innerHTML = `
+    <div class="quiz-header">
+      <strong>${synantState.type.toUpperCase()} — Q ${synantState.index+1}/${total}</strong>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:${(synantState.index/total)*100}%"></div></div>
+    <div class="quiz-question">
+      <p class="qtext">${q.q}</p>
+      <div id="saOptions"></div>
+      <div class="feedback" id="saFeedback"></div>
+    </div>
+    <div class="center hidden" id="saNextWrap"><button class="btn btn-success" onclick="synAntNext()">Next →</button></div>
+  `;
+  const optEl = document.getElementById('saOptions');
+  q.options.forEach((opt, j) => {
+    const btn = document.createElement('div');
+    btn.className = 'option';
+    btn.textContent = String.fromCharCode(65+j)+'. '+opt;
+    btn.onclick = () => {
+      document.querySelectorAll('#saOptions .option').forEach(o=>o.classList.add('disabled'));
+      const fb = document.getElementById('saFeedback');
+      if (j === q.correct) {
+        btn.classList.add('correct');
+        fb.textContent = '✅ Correct! ' + q.explain;
+        fb.className = 'feedback correct';
+        synantState.answers[synantState.index] = j;
+      } else {
+        btn.classList.add('wrong');
+        document.querySelectorAll('#saOptions .option')[q.correct].classList.add('correct');
+        fb.textContent = '❌ Correct: ' + q.options[q.correct] + ' — ' + q.explain;
+        fb.className = 'feedback wrong';
+        synantState.answers[synantState.index] = j;
+      }
+      document.getElementById('saNextWrap').classList.remove('hidden');
+      if (synantState.index === total-1) document.querySelector('#saNextWrap button').textContent = 'See Results';
+    };
+    optEl.appendChild(btn);
+  });
+}
+
+function synAntNext() {
+  if (synantState.index < synantState.questions.length - 1) {
+    synantState.index++;
+    renderSynAntQuestion();
+  } else {
+    const correct = synantState.answers.filter((a,i)=>a === synantState.questions[i].correct).length;
+    const total = synantState.questions.length;
+    const pct = Math.round(correct/total*100);
+    document.getElementById('synantArea').innerHTML = `
+      <div class="result-box">
+        <h3>${pct>=70?'🎉 Great job!':'📘 Keep practising'}</h3>
+        <div class="big">${correct} / ${total}</div>
+        <p>Score: <b>${pct}%</b></p>
+      </div>
+      <div class="center" style="margin-top:14px;">
+        <button class="btn btn-primary" onclick="startSynAntQuiz('${synantState.type}')">Try Another Set</button>
+      </div>
+    `;
+  }
+}
+
+/* =========================================================
+   ONE-WORD SUBSTITUTIONS
+   ========================================================= */
+const ONE_WORD = [
+  {w:"Altruist",m:"One who loves others selflessly"},
+  {w:"Amateur",m:"One who does a thing for pleasure, not money"},
+  {w:"Anarchist",m:"One who believes in no government"},
+  {w:"Atheist",m:"One who does not believe in God"},
+  {w:"Autobiography",m:"Life story written by oneself"},
+  {w:"Bibliography",m:"List of books on a subject"},
+  {w:"Bilingual",m:"One who speaks two languages"},
+  {w:"Cannibal",m:"One who eats human flesh"},
+  {w:"Carnivore",m:"One who eats flesh"},
+  {w:"Cosmopolitan",m:"One who belongs to all parts of the world"},
+  {w:"Debauchery",m:"Excessive indulgence in sensual pleasures"},
+  {w:"Dogmatic",m:"One who is stubbornly opinionated"},
+  {w:"Epicure",m:"One who enjoys fine food and drink"},
+  {w:"Epitaph",m:"Words written on a tomb"},
+  {w:"Etymology",m:"Study of the origin of words"},
+  {w:"Eulogy",m:"Speech in praise of someone (usually dead)"},
+  {w:"Fanatic",m:"One with excessive enthusiasm"},
+  {w:"Fatalist",m:"One who believes in fate"},
+  {w:"Fratricide",m:"Killing of a brother"},
+  {w:"Garrulous",m:"One who talks too much"},
+  {w:"Gregarious",m:"One who loves company"},
+  {w:"Herbivore",m:"One who eats plants"},
+  {w:"Iconoclast",m:"One who attacks tradition"},
+  {w:"Incognito",m:"In disguise, with hidden identity"},
+  {w:"Indict",m:"To formally charge with a crime"},
+  {w:"Insolvent",m:"Unable to pay debts"},
+  {w:"Introvert",m:"One who is shy and self-centered"},
+  {w:"Matricide",m:"Killing of a mother"},
+  {w:"Misanthrope",m:"One who hates mankind"},
+  {w:"Misogynist",m:"One who hates women"},
+  {w:"Narcissist",m:"One who is in love with oneself"},
+  {w:"Novice",m:"One who is new to a field"},
+  {w:"Obituary",m:"Notice of someone's death"},
+  {w:"Omnipotent",m:"One who is all-powerful"},
+  {w:"Omnipresent",m:"One who is present everywhere"},
+  {w:"Omniscient",m:"One who knows everything"},
+  {w:"Optimist",m:"One who looks at the bright side"},
+  {w:"Ornithology",m:"Study of birds"},
+  {w:"Patricide",m:"Killing of a father"},
+  {w:"Pediatrician",m:"Doctor for children"},
+  {w:"Pessimist",m:"One who looks at the dark side"},
+  {w:"Philatelist",m:"One who collects stamps"},
+  {w:"Philanthropist",m:"One who loves mankind"},
+  {w:"Polyglot",m:"One who knows many languages"},
+  {w:"Posthumous",m:"Occurring after death"},
+  {w:"Pragmatist",m:"One who values practical results"},
+  {w:"Skeptic",m:"One who doubts everything"},
+  {w:"Somniloquist",m:"One who talks in sleep"},
+  {w:"Somnambulist",m:"One who walks in sleep"},
+  {w:"Stoic",m:"One indifferent to pleasure and pain"},
+  {w:"Suicide",m:"Killing of oneself"},
+  {w:"Teetotaler",m:"One who abstains from alcohol"},
+  {w:"Uxoricide",m:"Killing of a wife"},
+  {w:"Verbatim",m:"Word for word"},
+  {w:"Versatile",m:"One who is good at many things"},
+  {w:"Volunteer",m:"One who offers service willingly"},
+  {w:"Widow",m:"Woman whose husband is dead"},
+  {w:"Widower",m:"Man whose wife is dead"},
+  {w:"Xenophobia",m:"Fear of foreigners"},
+  {w:"Zoology",m:"Study of animals"}
+];
+
+function initOneWord() {
+  renderOneWord(ONE_WORD);
+  document.getElementById('owSearch').oninput = (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    renderOneWord(ONE_WORD.filter(o => o.w.toLowerCase().includes(q) || o.m.toLowerCase().includes(q)));
+  };
+}
+function renderOneWord(list) {
+  document.getElementById('owList').innerHTML = list.map(o => `
+    <div class="quiz-question" style="padding:10px 14px;">
+      <p class="qtext" style="margin-bottom:3px;">${o.w}</p>
+      <p style="font-size:0.87em;color:#4a5568;margin:0;">${o.m}</p>
+    </div>
+  `).join('') || '<p class="hint">No results found.</p>';
+}
+
+/* =========================================================
+   PASSAGES
+   ========================================================= */
+const PASSAGES = [
+  {
+    id: 1, title: "The Importance of Reading",
+    text: "Reading is one of the most beneficial habits a person can develop. It not only expands one's vocabulary and knowledge but also enhances one's ability to concentrate. In an era dominated by fleeting digital content, sustained reading of books offers a rare opportunity for deep reflection. Studies have shown that regular readers tend to be more empathetic, as reading fiction allows them to experience lives and perspectives different from their own. Furthermore, reading is an inexpensive form of entertainment that can be enjoyed at any age. In conclusion, cultivating the habit of reading is an investment in oneself that pays dividends throughout life.",
+    questions: [
+      {q:"According to the passage, reading enhances all of the following EXCEPT:",options:["vocabulary","concentration","wealth","empathy"],correct:2,explain:"Wealth is not mentioned; the passage says reading is inexpensive."},
+      {q:"Why are regular readers more empathetic, according to the passage?",options:["They read non-fiction only.","Fiction lets them experience other lives.","They earn more money.","They read quickly."],correct:1,explain:"Fiction allows readers to experience different perspectives."},
+      {q:"The phrase 'pays dividends' in the passage most nearly means:",options:["earns interest","brings benefits over time","costs money","is a burden"],correct:1,explain:"It means the benefits accumulate over time."},
+      {q:"Which word from the passage is closest in meaning to 'fleeting'?",options:["lasting","temporary","beneficial","deep"],correct:1,explain:"Fleeting = temporary/short-lived."}
+    ]
+  },
+  {
+    id: 2, title: "Climate Change and Agriculture",
+    text: "Climate change poses a significant threat to global agriculture. Rising temperatures, erratic rainfall patterns, and an increase in extreme weather events are already affecting crop yields in many parts of the world. Small-scale farmers in developing countries are particularly vulnerable, as they often lack the resources to adapt to these changing conditions. Scientists warn that without decisive action, food insecurity could worsen dramatically in the coming decades. However, there is also reason for optimism: advances in drought-resistant crops and improved farming techniques offer hope. Governments and international organizations must collaborate to ensure that these innovations reach those who need them most.",
+    questions: [
+      {q:"Who is most vulnerable to climate change according to the passage?",options:["Large corporations","Small-scale farmers in developing countries","Urban consumers","Scientists"],correct:1,explain:"Small-scale farmers in developing countries are particularly vulnerable."},
+      {q:"What gives reason for optimism in the passage?",options:["Rising temperatures","Drought-resistant crops and improved techniques","Food insecurity","Erratic rainfall"],correct:1,explain:"Advances in crops and techniques offer hope."},
+      {q:"The word 'erratic' most nearly means:",options:["predictable","irregular","beneficial","abundant"],correct:1,explain:"Erratic = irregular/unpredictable."},
+      {q:"Which of the following is NOT mentioned as a threat?",options:["Rising temperatures","Extreme weather","Urban pollution","Erratic rainfall"],correct:2,explain:"Urban pollution is not mentioned."}
+    ]
+  },
+  {
+    id: 3, title: "The Value of Discipline",
+    text: "Discipline is the bridge between goals and accomplishment. Without it, even the most talented individuals often fail to reach their potential. Discipline involves consistent effort, self-control, and the willingness to delay gratification. It is not about rigid rules but about making deliberate choices that align with long-term objectives. Successful athletes, scholars, and entrepreneurs all share one common trait: they have cultivated habits of discipline. While motivation may fade, discipline endures. In essence, discipline is not a restriction on freedom but a path to it, because it allows us to achieve what truly matters to us.",
+    questions: [
+      {q:"According to the passage, discipline is:",options:["a rigid set of rules","a bridge between goals and accomplishment","unnecessary for success","the same as motivation"],correct:1,explain:"The passage explicitly says discipline is the bridge between goals and accomplishment."},
+      {q:"Which quality is NOT mentioned as part of discipline?",options:["Consistent effort","Self-control","Delaying gratification","Natural talent"],correct:3,explain:"Natural talent is not part of discipline."},
+      {q:"The passage suggests that discipline is:",options:["a restriction on freedom","a path to freedom","opposite to achievement","only for athletes"],correct:1,explain:"The passage says discipline is a path to freedom."},
+      {q:"'Gratification' most nearly means:",options:["satisfaction","delay","failure","effort"],correct:0,explain:"Gratification = satisfaction."}
+    ]
+  },
+  {
+    id: 4, title: "Technology and Human Connection",
+    text: "In the modern age, technology has transformed the way humans communicate. Social media platforms allow us to connect with people across the globe in an instant. However, critics argue that this hyper-connectivity comes at a cost. Studies suggest that excessive screen time can lead to feelings of isolation and loneliness, paradoxically undermining the very connections technology promises to foster. Face-to-face interaction, with its subtle cues and emotional resonance, remains irreplaceable. As we navigate this digital landscape, the challenge is to harness technology's benefits without losing the essence of human connection.",
+    questions: [
+      {q:"What paradox does the passage mention?",options:["Technology increases productivity.","Technology promises connection but can cause isolation.","Social media is free.","People use phones daily."],correct:1,explain:"The paradox is that technology promises connection but can cause loneliness."},
+      {q:"The word 'irreplaceable' in the passage means:",options:["easy to replace","impossible to substitute","unnecessary","temporary"],correct:1,explain:"Irreplaceable = cannot be replaced."},
+      {q:"What is the challenge mentioned in the passage?",options:["Avoiding all technology","Harnessing benefits without losing human connection","Eliminating social media","Increasing screen time"],correct:1,explain:"The challenge is balancing technology's benefits with human connection."},
+      {q:"According to the passage, which is irreplaceable?",options:["Social media","Screen time","Face-to-face interaction","Digital platforms"],correct:2,explain:"Face-to-face interaction is described as irreplaceable."}
+    ]
+  },
+  {
+    id: 5, title: "The Benefits of Physical Exercise",
+    text: "Regular physical exercise is widely recognized as one of the most effective ways to maintain overall health. It improves cardiovascular function, builds muscle strength, and helps regulate body weight. Beyond these physical benefits, exercise also has a profound impact on mental well-being. Endorphins released during physical activity act as natural mood elevators, reducing symptoms of anxiety and depression. Moreover, exercise is not limited to gyms or structured routines — walking, dancing, gardening, and even household chores contribute to an active lifestyle. The key is consistency: even thirty minutes of moderate activity most days of the week can yield substantial benefits.",
+    questions: [
+      {q:"Which of the following is NOT mentioned as a benefit of exercise?",options:["Cardiovascular improvement","Muscle strength","Increased wealth","Mental well-being"],correct:2,explain:"Increased wealth is not mentioned."},
+      {q:"Endorphins are described as:",options:["harmful chemicals","natural mood elevators","muscle builders","dietary supplements"],correct:1,explain:"Endorphins act as natural mood elevators."},
+      {q:"What is described as the key to exercise?",options:["Intensity","Consistency","Equipment","Duration only"],correct:1,explain:"The passage says consistency is the key."},
+      {q:"'Profound' most nearly means:",options:["shallow","deep/significant","temporary","minor"],correct:1,explain:"Profound = deep/significant."}
+    ]
+  }
+];
+
+function initPassages() {
+  const chips = document.getElementById('passageChips');
+  PASSAGES.forEach((p, i) => {
+    const chip = document.createElement('div');
+    chip.className = 'filter-chip' + (i===0?' active':'');
+    chip.textContent = p.title;
+    chip.onclick = () => {
+      document.querySelectorAll('#passageChips .filter-chip').forEach(x=>x.classList.remove('active'));
+      chip.classList.add('active');
+      renderPassage(i);
+    };
+    chips.appendChild(chip);
+  });
+  renderPassage(0);
+}
+
+function renderPassage(index) {
+  const p = PASSAGES[index];
+  const area = document.getElementById('passageArea');
+  const answerState = new Array(p.questions.length).fill(null);
+  area.innerHTML = `
+    <div class="passage-box">
+      <h4>${p.title}</h4>
+      <p>${p.text}</p>
+    </div>
+    <h3>Questions</h3>
+    <div id="passageQs"></div>
+    <div id="passageResult"></div>
+  `;
+  const qsEl = document.getElementById('passageQs');
+  p.questions.forEach((q, qi) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-question';
+    div.innerHTML = `<p class="qtext">${qi+1}. ${q.q}</p>`;
+    q.options.forEach((opt, oi) => {
+      const btn = document.createElement('div');
+      btn.className = 'option';
+      btn.textContent = String.fromCharCode(65+oi)+'. '+opt;
+      btn.onclick = () => {
+        if (answerState[qi] !== null) return;
+        div.querySelectorAll('.option').forEach(o=>o.classList.add('disabled'));
+        answerState[qi] = oi;
+        const fb = div.querySelector('.feedback');
+        if (oi === q.correct) {
+          btn.classList.add('correct');
+          fb.textContent = '✅ Correct! ' + q.explain;
+          fb.className = 'feedback correct';
+        } else {
+          btn.classList.add('wrong');
+          div.querySelectorAll('.option')[q.correct].classList.add('correct');
+          fb.textContent = '❌ Correct: ' + q.options[q.correct] + ' — ' + q.explain;
+          fb.className = 'feedback wrong';
+        }
+        if (answerState.every(a => a !== null)) {
+          const correct = answerState.filter((a,i)=>a===p.questions[i].correct).length;
+          document.getElementById('passageResult').innerHTML = `
+            <div class="result-box">
+              <h3>Passage Complete</h3>
+              <div class="big">${correct} / ${p.questions.length}</div>
+              <p>Score: <b>${Math.round(correct/p.questions.length*100)}%</b></p>
+            </div>
+          `;
+        }
+      };
+      div.appendChild(btn);
+    });
+    const fb = document.createElement('div');
+    fb.className = 'feedback';
+    div.appendChild(fb);
+    qsEl.appendChild(div);
+  });
+}
+
+/* =========================================================
+   MAIN TABS
+   ========================================================= */
+document.querySelectorAll('.main-tab').forEach(tab => {
+  tab.onclick = () => {
+    document.querySelectorAll('.main-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.panel).classList.add('active');
+    window.scrollTo(0,0);
+  };
+});
+
+/* =========================================================
+   INIT
+   ========================================================= */
+renderLevelTabs();
+updateStats();
+openLevel(0);
+initVocab();
+initOneWord();
+initPassages();
+</script>
+</body>
+</html>
